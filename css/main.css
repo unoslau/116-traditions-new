@@ -1,0 +1,736 @@
+/* 116 Traditions stylesheet  |  Coumbia Daily Spectator 
+ * August 2014  |  Steven Lau
+ * Utilizes HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com 
+ * 
+ * 
+ * Table of Contents
+ * 1.0 HTML5 Boilerplate stuff
+ * 2.0 HTML5 Boilerplate Mobile stuff
+ *   2.1 Mobile Menu
+ *   2.2 Mobile Main
+ *   2.3 All IE Fixes
+ * 3.0 Custom Styles
+ *   3.1 Header
+ *   3.2 Left Column
+ *   3.3 Right Column
+ *   3.4 Ads
+ * 4.0 Media Queries
+ *   4.1 
+ */
+
+
+/* ===================================================================
+   1.0 HTML5 Boilerplate stuff 
+   =================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ===================================================================
+   2.0 HTML5 Boilerplate Mobile stuff 
+   =================================================================== */
+
+/* 2.1 MOBILE: Menu */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 2.2 MOBILE: Main */
+
+.main {
+    padding: 30px 0;
+}
+
+/* 2.3 ALL: IE Fixes */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+
+/* ==========================================================================
+   3.0 Custom Styles
+   ========================================================================== */
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+body {
+	font-family: 'Whitney SSm A', 'Whitney SSm B';
+	font-weight: 400;
+	font-style: normal;
+}
+
+
+/* ==========================================================================
+   3.1 Header
+   ========================================================================== */
+
+.header-container {
+	background-color: #6699cc;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	z-index: 31;
+}
+
+#nav-title {
+	float: left;
+	margin: 0.5rem;
+	font-weight: 600;
+	font-size: 2rem;
+	line-height: 2rem;
+	color: #FFFFFF;
+}
+
+.spec-logo {
+	float: right;
+	height: 2rem;
+	width: auto;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	left: 0;
+	z-index: 32;
+	margin-right: 7%;
+}
+
+
+/* ==========================================================================
+   3.2 Left Column
+   ========================================================================== */
+
+.left-container {
+	z-index: 3;
+	background-color: #FFFFFF;
+	overflow: hidden;
+	/* position: absolute;
+	top: 0;
+	left: 0; */
+	padding: 0 1em 1em 1em;
+	height: 100%;
+	box-sizing:border-box;
+}
+
+
+.right-container {
+	/* background-color: #555555; */
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	/* position: absolute;
+	top: 0;
+	float: right; */
+	/* right: 0; */
+	box-sizing:border-box;
+}
+
+/* 48rem = 768px which is the short-side resolution for an iPad*/
+@media (min-width: 48rem) {
+	.left-container {
+		width: 35%;
+		height: calc(100% - 3rem); /*Sets height based on the margin-top*/
+		max-width: 26.25rem;
+		padding: 0.5em 0.5em 0.2em;
+		/* display:inline-block; */
+		/* margin: 0 auto; */
+		margin-top: 3rem !important; /*Moves content down to make space for nav bar*/
+		position: absolute;
+		top: 0;
+		left: 0; /*inherit the where it starts on the left from the wrapper class*/
+		overflow: hidden;
+		border-right: 0.15rem dotted #999999;
+	}
+	
+	.right-container {
+		width: 65%;
+		height: calc(100% - 3rem); /*Sets height based on the margin-top*/
+		max-width: 48.75rem;
+		/* display:inline-block; */
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: 3rem !important; /*Moves content down to make space for nav bar*/
+		margin-left: 35%;
+		z-index: 1;
+		text-align: center; /*To center the inline-block elements */
+	}
+}
+
+
+.button-panel {
+	border-left: 0.15em solid transparent;
+	border-right: 0.15em solid transparent;
+	border-bottom: 0.3em solid black;
+	height: 7rem;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+}
+
+/*  REMOVED THE ELEMENT WITH THIS ID
+#traditions-headline {
+	margin: 0;
+	font-weight: 800;
+	font-size: 2rem;
+	text-align:center;
+}
+
+
+@media (min-width: 55rem) {
+	#traditions-headline {
+		font-size:2.5rem;
+	}
+}
+
+@media (min-width: 66rem) {
+	#traditions-headline {
+		font-size:3rem;
+	}
+}
+*/
+
+.section-title {
+	margin: 0.5rem auto;
+	text-align: left;
+	font-size: 1rem;
+	line-height: 1rem;
+	font-weight: 600;
+	color: #999999;
+	display: inline-block;
+	width: 100%;
+}
+
+#instructions {
+	margin: 0 auto 0.5rem;
+	text-align: left;
+	font-size: 0.9em;
+	display: inline-block;
+	width: 90%;
+}
+
+#button-group {
+	margin: 0 auto 0.5rem;
+	text-align: center;
+	font-weight:600;
+	font-size: 0.9rem;
+	display:inline-block;
+}
+
+/*Custom style for buttons*/
+.filter-button {
+	font-family: 'Whitney SSm A', 'Whitney SSm B';
+	font-weight: 600;
+	font-style: normal;
+	font-size: 0.8rem;
+	padding: 0.1rem 0.4rem 0.1rem;
+	display: inline-block;
+	margin: 0 0.1rem;
+	border: 0.15rem outset #999999;
+	border-radius: 0.5rem;
+	background-color: #CCCCCC;
+}
+
+/*toggles when buttons are clicked*/
+.button-selected {
+	border: 0.15rem inset #999999;
+	font-weight: 400;
+	background-color: #6699cc;
+	color: #FFFFFF;
+}
+
+
+#scroll-nav-tool {
+	margin: 0 auto 0.5rem;
+	text-align: center;
+	font-weight:600;
+	font-size: 0.9rem;
+	display:inline-block;
+	
+}
+
+
+/* The div containing all 116 traditions*/
+.traditions-container {
+	width: 100%;
+	height: calc(100% - 8rem); /*7rem for button panel height, plus room for padding and white space on bottom*/
+	overflow: auto;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	/* BORDER REMOVED
+	border-left: 0.15rem dotted #999999;
+	border-right: 0.15rem dotted #999999;
+	border-bottom: 0.15rem dotted #999999;
+	*/
+}
+
+/*Style for the divs containing each tradition*/
+.tradition{
+	display: block;
+	/*width: 100%;*/
+	border: 0.2em solid #777777;
+	border-radius: 1em;
+	margin: 0.2em 0.2em;
+	color:#000000;
+	padding: 0.2em 0.4em;
+}
+
+/*Style for the tradition numbers*/
+.trad-number {
+	display: inline-block;
+	font-family: 'Whitney SSm A', 'Whitney SSm B';
+	font-weight: 700;
+	font-style: italic;
+	font-size: 1.5em;
+	height: 100%;
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	padding-right: 0.2em;
+	padding-left: 0.2em;
+	width: 2em;
+	color: #444444;
+	text-align: center;
+	vertical-align: middle;
+	background-image: url("../img/circle_gray.svg");
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	cursor: pointer;
+}
+
+
+/*Style for the text of each tradition*/
+.trad-descip {
+	display: inline-block;
+	/* Firefox */
+	width: -moz-calc(100% - 4.5em);
+	/* WebKit */
+	width: -webkit-calc(100% - 4.5em);
+	/* Opera */
+	width: -o-calc(100% - 4.5em);
+	/* Standard */
+	width: calc(100% - 4.5em);
+	padding-top: 0.4em;
+	padding-bottom: 0.4em;
+	vertical-align: middle;
+	font-size: 0.9em;
+}
+
+/*Toggled class for green checked symbol*/
+.checkmark {
+	background-image: url("../img/checkmark_circle_green.svg");
+	background-position-x: 50%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	color: #999999;
+	color: rgba(0,0,0,0.2);
+}
+
+/*Toggled class for traditions that are completed*/
+.completed {
+	border: 0.2em solid #4ca454;
+	background-color: #99cc99;
+}
+
+
+/*elements with this class are hidden from the screen*/
+.hidden {
+	display: none;
+}
+
+
+/* ==========================================================================
+   3.3 Right Column
+   ========================================================================== */
+
+/* Div in which instructions and sharing buttons will go*/
+#status-container {
+	display:inline-block;
+	height: 15.625rem;
+	width: 18.75rem;
+	background-color:#4CA454;
+	margin: 0 auto;
+	vertical-align: top;
+}
+
+#featured-content-container {
+	display:inline-block;
+	box-sizing:border-box;
+	width: calc(100% - 2rem);
+	height: 23.75rem;
+	margin: 1rem;
+	padding: 0.5rem;
+	border: .15rem dotted #999999;
+	border-radius: 0.8rem;
+}
+
+#featured-photo-container {
+	display:inline-block;
+	box-sizing:border-box;
+	height: calc(100% - 2rem);
+	width: calc((100% - 1rem)/10*7);
+	/* background-color:#4CA454; */
+	vertical-align: top;
+	border: 0.15rem solid #999999;
+	border-radius: 0.8rem;
+	padding: 2%;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-position: top center;
+}
+
+#featured-text-container {
+	display:inline-block;
+	box-sizing:border-box;
+	height: calc(100% - 2rem);
+	width: calc((100% - 1rem)/10*3);
+	background-color:#FFFF00;
+	vertical-align: top;
+	border: 0.15rem solid #999999;
+	border-radius: 0.8rem;
+}
+
+
+/* ==========================================================================
+   3.4 AD STYLES - serve as placeholders until the real ad codes are added
+   ========================================================================== */
+
+
+.leaderboard {
+	height: 5.625rem;
+	/* width: 93.34%;  NEED TO USE % FOR HEIGHT IF USE % FOR WIDTH */
+	width: 45.5rem;
+	background-color:#E44D26;
+	/* margin: 1rem 3.33%; NEED TO USE % FOR HEIGHT IF USE % FOR WIDTH */
+	margin: 1rem auto;
+}
+
+
+.box-ad {
+	height: 15.625rem;
+	width: 18.75rem;
+	background-color:#E44D26;
+	margin: 1rem auto;
+}
+
+
+.interstitial-ad {
+	display:inline-block;
+	height: 15.625rem;
+	width: 18.75rem;
+	background-color:#E44D26;
+	margin: 0 auto;	
+}
+
+
+
+/* ==========================================================================
+   4.0 Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 75rem) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 75rem; /* 1200px */
+        margin: 0 auto;
+    }
+    
+    .right-container {
+    	margin-left: 26.25rem;
+    	left: inherit;
+    }
+    
+    .left-container {
+    	left: inherit;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
