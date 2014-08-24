@@ -36,27 +36,44 @@
 				
 				<!--Container for right side elements-->
 				<div class="right-container">
+					
 					<div class="leaderboard">LEADERBOARD</div>
 					
-					<div id="status-container">
-						<div>Once you've marked the traditions you've completed in the checklist, find out how many you've done.</div>
-						<button id="calculate">How many traditions have you completed?</button>
-						<div>You've completed <span id="counter">0</span> of 116 Columbia traditions.</div>
-					</div>
-					
-					<div class="interstitial-ad">INTERSTITIAL</div>
+					<div class="social-button-bar">SOCIAL BUTTONS</div>
 					
 					<div id="featured-content-container">
 						<div class="section-title">
 							Featured Traditions
+							<div class="featured-trad-number" id="featured-no-7">7</div>
+							<div class="featured-trad-number" id="featured-no-15">15</div>
+							<div class="featured-trad-number" id="featured-no-17">17</div>
+							<div class="featured-trad-number" id="featured-no-20">20</div>
+							<div class="featured-trad-number" id="featured-no-26">26</div>
+							<div class="featured-trad-number" id="featured-no-27">27</div>
+							<div class="featured-trad-number" id="featured-no-44">44</div>
 						</div>
 						<div id="featured-photo-container">
-							TEST
+							<div id="featured-photo"></div>
+							<div id="featured-photo-credit"></div>
 						</div>
 						<div id="featured-text-container">
-							TEST
+							<div id="featured-text"></div>
+							<div id="featured-nav-buttons" class="clearfix">
+								<div id="previous"><div id="left-arrow"></div>Previous</div>
+								<div id="next">Next<div id="right-arrow"></div></div>
+							</div>
 						</div>
+					</div> <!-- End of featured-content-container -->
+					
+					
+					<div id="status-container">
+						<div class="section-title">Your Count</div>
+						<div class="status-text">Once you've marked the traditions you've completed in the checklist, find out how many you've done.</div>
+						<button id="calculate-button">How many traditions have you completed?</button>
+						<div class="hidden"><span id="counter">0</span> of 116 Columbia traditions completed</div>
 					</div>
+					
+					<div class="interstitial-ad">INTERSTITIAL</div>
 					
 				</div>
 				
@@ -93,7 +110,7 @@
 					
 					<div class="tradition clearfix" id="no-1">
 						<div class="trad-number">1</div>
-						<div class="trad-descip">Enter the 116th Street gates and sing “Roar, Lion, Roar” on the first night of orientation.</div>
+						<div class="trad-descip">Enter the 116th Street gates and sing <a href="http://en.wikipedia.org/wiki/Roar,_Lion,_Roar">“Roar, Lion, Roar”</a> on the first night of orientation.</div>
 					</div>
 					<div class="tradition clearfix" id="no-2">
 						<div class="trad-number">2</div>
@@ -101,7 +118,7 @@
 					</div>
 					<div class="tradition clearfix" id="no-3">
 						<div class="trad-number">3</div>
-						<div class="trad-descip">Try to figure out the Barnard-Columbia relationship. Give up and realize that students from both sides of Broadway are great.</div>
+						<div class="trad-descip">Try to figure out the <a href="http://columbiaspectator.com/2012/02/16/examining-barnard-columbia-relationship">Barnard-Columbia relationship</a>. Give up and realize that students from both sides of Broadway are great.</div>
 					</div>
 					<div class="tradition clearfix" id="no-4">
 						<div class="trad-number">4</div>
@@ -117,8 +134,8 @@
 					</div>
 					<div class="tradition" id="no-7">
 						<div class="trad-number">7</div>
-						<div class="trad-descip">Get a Broadway shake at Tom’s after 3 a.m.
-							<button class="featured-button">See more</button>
+						<div class="trad-descip">Get a Broadway shake at <a href="http://columbiaspectator.com/tags/toms-restaurant">Tom’s</a> after 3 a.m.
+							<button class="featured-button">Featured</button>
 						</div>
 					</div>
 					<div class="tradition" id="no-8">
@@ -147,12 +164,12 @@
 					</div>
 					<div class="tradition" id="no-14">
 						<div class="trad-number">14</div>
-						<div class="trad-descip">Develop a vague idea about what Manhattanville is. Realize it probably won’t affect you, but argue about it anyway.</div>
+						<div class="trad-descip">Develop a vague idea about what <a href="http://columbiaspectator.com/tags/manhattanville">Manhattanville</a> is. Realize it probably won’t affect you, but argue about it anyway.</div>
 					</div>
 					<div class="tradition" id="no-15">
 						<div class="trad-number">15</div>
 						<div class="trad-descip">Listen to Vampire Weekend’s discography. Alternatively, lie about having listened to Vampire Weekend.
-							<button class="featured-button">See more</button>
+							<button class="featured-button">Featured</button>
 						</div>
 					</div>
 					<div class="tradition" id="no-16">
@@ -165,7 +182,7 @@
 					</div>
 					<div class="tradition" id="no-18">
 						<div class="trad-number">18</div>
-						<div class="trad-descip">Eat a slice of Koronet pizza after a long night of drinking. Return another day to discover it’s not as good when you’re sober.</div>
+						<div class="trad-descip">Eat a slice of <a href="http://columbiaspectator.com/tags/koronet">Koronet</a> pizza after a long night of drinking. Return another day to discover it’s not as good when you’re sober.</div>
 					</div>
 					<div class="tradition" id="no-19">
 						<div class="trad-number">19</div>
@@ -173,12 +190,12 @@
 					</div>
 					<div class="tradition" id="no-20">
 						<div class="trad-number">20</div>
-						<div class="trad-descip">Watch the Varsity Show each year at Columbia. Notice repetition of tired Barnard jokes. Also GS jokes. And SEAS jokes.</div>
+						<div class="trad-descip">Watch the <a href="http://columbiaspectator.com/tags/varsity-show">Varsity Show</a> each year at Columbia. Notice repetition of tired Barnard jokes. Also GS jokes. And SEAS jokes.</div>
 					</div>
 					<div class="box-ad">BOX AD</div>
 					<div class="tradition" id="no-21">
 						<div class="trad-number">21</div>
-						<div class="trad-descip">Register for a class without consulting CULPA. Never do it again.</div>
+						<div class="trad-descip">Register for a class without consulting <a href="http://www.culpa.info">CULPA</a>. Never do it again.</div>
 					</div>
 					<div class="tradition" id="no-22">
 						<div class="trad-number">22</div>
@@ -198,15 +215,19 @@
 					</div>
 					<div class="tradition" id="no-26">
 						<div class="trad-number">26</div>
-						<div class="trad-descip">Protest something.</div>
+						<div class="trad-descip"><a href="http://columbiaspectator.com/tags/protest">Protest</a> something.
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-27">
 						<div class="trad-number">27</div>
-						<div class="trad-descip">Counterprotest something.</div>
+						<div class="trad-descip"><a href="http://columbiaspectator.com/tags/protest">Counterprotest</a> something.
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-28">
 						<div class="trad-number">28</div>
-						<div class="trad-descip">Get shafted in McBain. Instagram passive-aggressive posts of the shaft view. Do this until you lose all your followers.</div>
+						<div class="trad-descip">Get <a href="http://spectrum.columbiaspectator.com/category/the-shaft">shafted</a> in McBain. Instagram passive-aggressive posts of the shaft view. Do this until you lose all your followers.</div>
 					</div>
 					<div class="tradition" id="no-29">
 						<div class="trad-number">29</div>
@@ -216,8 +237,66 @@
 						<div class="trad-number">30</div>
 						<div class="trad-descip">Realize Harlem is a lot safer and more interesting than you thought it was.</div>
 					</div>
-					
-					
+					<div class="tradition" id="no-31">
+						<div class="trad-number">31</div>
+						<div class="trad-descip">Go to Health Services with a cold. Leave with condoms.</div>
+					</div>
+					<div class="tradition" id="no-32">
+						<div class="trad-number">32</div>
+						<div class="trad-descip">Have fun at <a href="http://columbiaspectator.com/tags/glass-house-rocks">Glass House Rocks</a>. Once it’s over, be reminded about how much Lerner sucks.</div>
+					</div>
+					<div class="tradition" id="no-33">
+						<div class="trad-number">33</div>
+						<div class="trad-descip">Go to a campus group’s performance. Cheer obnoxiously for the friend you know.</div>
+					</div>
+					<div class="tradition" id="no-34">
+						<div class="trad-number">34</div>
+						<div class="trad-descip">Go to <a href="http://spectrum.columbiaspectator.com/tag/midnight-breakfast">Midnight Breakfast</a> and drown your pre-exam jitters in syrup and ’90s pop music.</div>
+					</div>
+					<div class="tradition" id="no-35">
+						<div class="trad-number">35</div>
+						<div class="trad-descip">Make friends with maintenance workers and security guards (and buy their CDs).</div>
+					</div>
+					<div class="tradition" id="no-36">
+						<div class="trad-number">36</div>
+						<div class="trad-descip">Participate in PrezBo’s 5K fun run.</div>
+					</div>
+					<div class="tradition" id="no-37">
+						<div class="trad-number">37</div>
+						<div class="trad-descip">Witness a Columbia athletics victory. High-five Roar-ee.</div>
+					</div>
+					<div class="tradition" id="no-38">
+						<div class="trad-number">38</div>
+						<div class="trad-descip">Subscribe to each new philosopher you read. Believe in nothing but social constructs at one point in your college career.</div>
+					</div>
+					<div class="tradition" id="no-39">
+						<div class="trad-number">39</div>
+						<div class="trad-descip">Finish your Nine Ways of Knowing as early as possible. Never remember all nine of them at the same time (BC only).</div>
+					</div>
+					<div class="tradition" id="no-40">
+						<div class="trad-number">40</div>
+						<div class="trad-descip">Read a text from every author on the Butler frieze. Find out who <a href="http://en.wikipedia.org/wiki/Demosthenes">Demosthenes</a> is and let us know.</div>
+					</div>
+					<div class="box-ad">BOX AD</div>
+					<div class="tradition" id="no-41">
+						<div class="trad-number">41</div>
+						<div class="trad-descip">Take a walk of shame. Run into your professor. Understand true shame.</div>
+					</div>
+					<div class="tradition" id="no-42">
+						<div class="trad-number">42</div>
+						<div class="trad-descip">Spend freshman year rotating through Mel’s, The Heights, 1020, and Cannon’s. Then pick one sophomore year and never go anywhere else.</div>
+					</div>
+					<div class="tradition" id="no-43">
+						<div class="trad-number">43</div>
+						<div class="trad-descip">Change your major. Twice.</div>
+					</div>
+					<div class="tradition" id="no-44">
+						<div class="trad-number">44</div>
+						<div class="trad-descip">Take the vertical tour of Saint John the Divine. Be genuinely awed.
+							<button class="featured-button">Featured</button>
+						</div>
+					</div>
+										
 					
 					</div> <!--End of traditions container-->
 				</div> <!--End of left-container-->
