@@ -180,7 +180,7 @@ $('.featured-trad-number').click(function() {
 	var TraditionObj = FeaturedTraditionMap[id];
 	// If there's a video, display a video
 	if(TraditionObj.videoCheck) {
-		// switch video
+		switchVideo('#featured-photo',TraditionObj);
 		switchPhotoCredit('#featured-photo-credit',TraditionObj);
 		switchDescription('#featured-text',TraditionObj);
 		switchLink(TraditionObj);
@@ -243,8 +243,7 @@ function switchLink(TraditionObj) {
   
   var link = TraditionObj.link; 
   
-  $('#featured-photo').wrap('<a href="'+link+'"></a>');
-  $('#featured-text').wrap('<a class="featured-link" href="'+link+'"></a>');
+  $('.featured-link').prop("href", link);
 
 };
 
@@ -252,14 +251,16 @@ function switchLink(TraditionObj) {
 // Function to switch featured video
 function switchVideo(container,TraditionObj) {
   
-  var videoURL = TraditionObj.videoURL; 
+  var videoURL = TraditionObj.videoURL;
+  var width = $(container).width();
+  var height = width/16*9;
   
-  // Use .animate to fade out from the old image, then change the background-image and fade it in
+  // Use .animate to fade out from the old image/video, then change the background-image, add video, and fade in
   $(container).animate({opacity: 0}, 'slow', function() {
         $(container).empty();
   		$(container).css('background-image','');
   		//APPEND THE VIDEO
-  		$(container).append();
+  		$(container).append('<iframe width="'+width+'" height="'+height+'" src="'+videoURL+'" frameborder="0" allowfullscreen></iframe>');
         $(container).animate({opacity: 1}, 'slow');
   });
 
@@ -304,11 +305,11 @@ var tradition17 = {
 var tradition20 = {
 	'index':3,
 	'number':20,
-	'description':'',
+	'description':'The Varsity Show, a full-length musical put on entirely by students, has been performed at the end of the spring semester since 1984.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
-	'videoURL':'',
+	'videoURL':'//www.youtube.com/embed/nehB0yW3iUc?rel=0',
 	'link':''
 };
 
