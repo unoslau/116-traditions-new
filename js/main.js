@@ -156,7 +156,7 @@ $('.featured-button').click(function() {
 	
 	// If there's a video, display a video
 	if(TraditionObj.videoCheck) {
-		// switch video
+		switchVideo('#featured-photo',TraditionObj);
 		switchPhotoCredit('#featured-photo-credit',TraditionObj);
 		switchDescription('#featured-text',TraditionObj);
 		switchLink(TraditionObj);
@@ -168,7 +168,6 @@ $('.featured-button').click(function() {
 		switchDescription('#featured-text',TraditionObj);
 		switchLink(TraditionObj);
 	}
-
 });
 
 // Event handler for all the tradition number icons in the featured box
@@ -178,6 +177,20 @@ $('.featured-trad-number').click(function() {
 	id = id.replace("featured-no","no");
 	
 	var TraditionObj = FeaturedTraditionMap[id];
+	
+	
+	for (object in FeaturedTraditionMap) {
+		console.log(object);
+		var idcheck = "#featured-"+object;
+		console.log(idcheck);
+		if ($(idcheck).hasClass('selected-trad-number')) {
+			$(idcheck).toggleClass('selected-trad-number');
+		}
+	};
+	
+	$(this).toggleClass('selected-trad-number');
+	
+	
 	// If there's a video, display a video
 	if(TraditionObj.videoCheck) {
 		switchVideo('#featured-photo',TraditionObj);
@@ -291,17 +304,6 @@ var tradition15 = {
 	'link':'http://columbiaspectator.com/2014/06/07/photos-governors-ball-2014-jack-white-outkast-strokes-wow-crowds'
 };
 
-var tradition17 = {
-	'index':2,
-	'number':17,
-	'description':'',
-	'videoCheck':false,
-	'photoURL':'',
-	'photoCredit': '',
-	'videoURL':'',
-	'link':''
-};
-
 var tradition20 = {
 	'index':3,
 	'number':20,
@@ -316,12 +318,12 @@ var tradition20 = {
 var tradition26 = {
 	'index':4,
 	'number':26,
-	'description':'',
+	'description':'During the 2013-14 school year, student activism centered around Columbia\'s sexual assault policy. One of the most visible events was a freeze mob on College walk in November 2013 during which students held signs like the one pictured here.',
 	'videoCheck':false,
-	'photoURL':'',
-	'photoCredit': '',
+	'photoURL':'http://columbiaspectator.com/sites/default/files/title9_file.jpg',
+	'photoCredit': 'Kiera Wood / Senior Staff Photographer',
 	'videoURL':'',
-	'link':''
+	'link':'http://columbiaspectator.com/tags/sexual-assault'
 };
 
 var tradition27 = {
@@ -338,12 +340,23 @@ var tradition27 = {
 var tradition44 = {
 	'index':6,
 	'number':44,
-	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roo ... it\'ll be the best part of Art Hum, as long as you\'re not afraid of the heights.',
+	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roof ... it\'ll be the best part of Art Hum, as long as you\'re not afraid of the heights.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/StJohns.jpg',
 	'photoCredit': 'Justin Chan / Senior Staff Photographer',
 	'videoURL':'',
 	'link':'http://columbiaspectator.com/tags/saint-john-divine'
+};
+
+var tradition47 = {
+	'index':7,
+	'number':47,
+	'description':'In April 2012, Daniel Radcliffe came to campus to film "Kill Your Darlings," a Sony Pictures Classics movie about Columbia\'s famed beat writers.',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/Brann_Radcliffe-20120405.jpg',
+	'photoCredit': 'David Brann / Senior Staff Photographer',
+	'videoURL':'',
+	'link':'http://columbiaspectator.com/2013/10/18/kill-your-darlings-rediscovering-columbias-bohemians'
 };
 
 var tradition56 = {
@@ -368,11 +381,49 @@ var tradition57 = {
 	'link':'http://columbiaspectator.com/tags/take-back-night'
 };
 
+var tradition77 = {
+	'index':9,
+	'number':77,
+	'description':'',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//www.youtube.com/embed/WeQujjh4B_o?rel=0',
+	'link':'http://columbiaspectator.com/tags/bacchanal'
+};
+
+var tradition100 = {
+	'index':10,
+	'number':100,
+	'description':'Every December, Columbia hangs lights on the trees of College Walk and holds a celebration the first night they\'re turned on.',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//www.youtube.com/embed/I_UB4ETgSM8',
+	'link':'http://columbiaspectator.com/tags/tree-lighting-ceremony'
+};
+
+var tradition116 = {
+	'index':11,
+	'number':116,
+	'description':'Every May, Low Plaza and South Lawn fill up with light blue robes and eager friends and family for the University Commencement ceremony.',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/IMG_0711.jpg',
+	'photoCredit': 'Steven Lau / Senior Staff Photographer',
+	'videoURL':'',
+	'link':'http://columbiaspectator.com/2014/05/19/commencement-2014'
+};
+
 FeaturedTraditionMap['no-7'] = new FeaturedTraditionMap.FeaturedTradition(tradition7);
 FeaturedTraditionMap['no-15'] = new FeaturedTraditionMap.FeaturedTradition(tradition15);
-FeaturedTraditionMap['no-17'] = new FeaturedTraditionMap.FeaturedTradition(tradition17);
 FeaturedTraditionMap['no-20'] = new FeaturedTraditionMap.FeaturedTradition(tradition20);
 FeaturedTraditionMap['no-26'] = new FeaturedTraditionMap.FeaturedTradition(tradition26);
 FeaturedTraditionMap['no-27'] = new FeaturedTraditionMap.FeaturedTradition(tradition27);
 FeaturedTraditionMap['no-44'] = new FeaturedTraditionMap.FeaturedTradition(tradition44);
+FeaturedTraditionMap['no-47'] = new FeaturedTraditionMap.FeaturedTradition(tradition47);
 FeaturedTraditionMap['no-56'] = new FeaturedTraditionMap.FeaturedTradition(tradition56);
+FeaturedTraditionMap['no-57'] = new FeaturedTraditionMap.FeaturedTradition(tradition57);
+FeaturedTraditionMap['no-77'] = new FeaturedTraditionMap.FeaturedTradition(tradition77);
+FeaturedTraditionMap['no-100'] = new FeaturedTraditionMap.FeaturedTradition(tradition100);
+FeaturedTraditionMap['no-116'] = new FeaturedTraditionMap.FeaturedTradition(tradition116);
+

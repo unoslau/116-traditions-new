@@ -532,6 +532,7 @@ body {
 	height: calc(100% - 3rem);
 	width: 100%;
 	vertical-align: top;
+	text-align:left;
 }
 
 #featured-nav-buttons {
@@ -604,6 +605,11 @@ body {
 	background-repeat: no-repeat;
 	background-size: auto 100%;
 	cursor: pointer;
+}
+
+.selected-trad-number {
+	color:#000000;
+	background-image: url("../img/circle_gray_blue.svg");
 }
 
 a.featured-link, a.featured-link:link:visited {
