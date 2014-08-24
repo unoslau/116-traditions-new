@@ -305,7 +305,7 @@ var tradition17 = {
 var tradition20 = {
 	'index':3,
 	'number':20,
-	'description':'The Varsity Show, a full-length musical put on entirely by students, has been performed at the end of the spring semester since 1984.',
+	'description':'The Varsity Show, a full-length musical put on by students at the end of every spring semester since 1984, is one of Columbia\'s longest ongoing traditions.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
@@ -346,6 +346,27 @@ var tradition44 = {
 	'link':'http://columbiaspectator.com/tags/saint-john-divine'
 };
 
+var tradition56 = {
+	'index':7,
+	'number':56,
+	'description':'Orgo Night is a semesterly event held by the Columbia University Marching Band that happens in Butler 209 at midnight on the first Friday of finals.',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//www.youtube.com/embed/5lRAk9no4_0',
+	'link':'http://columbiaspectator.com/2014/05/08/orgo-night-live-blog'
+};
+
+var tradition57 = {
+	'index':8,
+	'number':57,
+	'description':'Started at Barnard in 1978, Take Back the Night aims to create a safe space for sexual assault survivors and to promote discussion about sexual violence on college campuses.',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/TBTNFromAbove_Kessel-lessYellow-WEB.jpg',
+	'photoCredit': 'File Photo',
+	'videoURL':'',
+	'link':'http://columbiaspectator.com/tags/take-back-night'
+};
 
 FeaturedTraditionMap['no-7'] = new FeaturedTraditionMap.FeaturedTradition(tradition7);
 FeaturedTraditionMap['no-15'] = new FeaturedTraditionMap.FeaturedTradition(tradition15);
@@ -354,3 +375,4 @@ FeaturedTraditionMap['no-20'] = new FeaturedTraditionMap.FeaturedTradition(tradi
 FeaturedTraditionMap['no-26'] = new FeaturedTraditionMap.FeaturedTradition(tradition26);
 FeaturedTraditionMap['no-27'] = new FeaturedTraditionMap.FeaturedTradition(tradition27);
 FeaturedTraditionMap['no-44'] = new FeaturedTraditionMap.FeaturedTradition(tradition44);
+FeaturedTraditionMap['no-56'] = new FeaturedTraditionMap.FeaturedTradition(tradition56);
