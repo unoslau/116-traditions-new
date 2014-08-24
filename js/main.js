@@ -252,10 +252,14 @@ function switchLink(TraditionObj) {
 // Function to switch featured video
 function switchVideo(container,TraditionObj) {
   
+  var videoURL = TraditionObj.videoURL; 
+  
   // Use .animate to fade out from the old image, then change the background-image and fade it in
   $(container).animate({opacity: 0}, 'slow', function() {
         $(container).empty();
-  		$(container).css('background-image',imagepath);
+  		$(container).css('background-image','');
+  		//APPEND THE VIDEO
+  		$(container).append();
         $(container).animate({opacity: 1}, 'slow');
   });
 

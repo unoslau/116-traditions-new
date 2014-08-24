@@ -544,26 +544,32 @@ body {
 
 #previous {
 	float: left;
-	font-size:0.9rem;
+	font-size:0.8rem;
+	cursor:pointer;
 }
 
 #next {
 	float: right;
-	font-size:0.9rem;
+	font-size:0.8rem;
+	cursor:pointer;
+}
+
+#previous:hover, #next:hover {
+	color:#6699CC;
 }
 
 #right-arrow {
-	height: 2rem;
-	width: 2rem;
-	background-image: url('../img/right-arrow.svg');
+	height: 1.8rem;
+	width: 1.8rem;
+	background-image: url('../img/right_arrow_gray.svg');
 	background-size:cover;
 	background-position:top center;
 }
 
 #left-arrow {
-	height: 2rem;
-	width: 2rem;
-	background-image: url('../img/left-arrow.svg');
+	height: 1.8rem;
+	width: 1.8rem;
+	background-image: url('../img/left_arrow_gray.svg');
 	background-size:cover;
 	background-position:top center;
 }
