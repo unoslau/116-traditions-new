@@ -125,6 +125,33 @@ $(document).ready(function() {
     	// If the all button is already selected, nothing happens
 	});
 	
+	
+	/****************************************************
+	 Event handler for calculate button
+	 ****************************************************/
+	var countComplete = 0;
+	var resultsArray = [];
+	resultsArray[0] = "";
+	
+	$('#calculate-button').click(function() {
+		
+		countComplete = $('.completed').length;
+		
+		$('#inner-count-container').animate({opacity: 0}, 'slow', function() {
+        	$('#inner-count-container').empty();
+        	var str = '<div class="count-text"><span id="counter">'+countComplete+'</span> of 116 Columbia traditions completed</div>';
+  			$('#inner-count-container').append(str);
+  			
+  			if($('#calculate-button').text()!="Recalculate Count") {
+  				$('#calculate-button').text("Recalculate Count");
+  			}
+  			
+        	$('#inner-count-container').animate({opacity: 1}, 'slow');
+  		});
+		
+	});
+	
+	
 });
 
 

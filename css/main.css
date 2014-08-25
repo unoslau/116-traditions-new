@@ -437,8 +437,8 @@ body {
    3.3 Right Column
    ========================================================================== */
 
-/* Div in which instructions and sharing buttons will go*/
-#status-container {
+/* Div in which count and sharing buttons will go*/
+#count-container {
 	display:inline-block;
 	height: 15.625rem;
 	width: 18.75rem;
@@ -450,12 +450,16 @@ body {
 	border-radius: 0.8rem;
 }
 
-.status-text {
+.count-text {
 	margin: 0 auto 0.5rem;
 	text-align: left;
 	font-size: 0.9em;
 	display: inline-block;
 	width: 90%;
+}
+
+#counter {
+	font-size: 3rem;
 }
 
 #calculate-button {
