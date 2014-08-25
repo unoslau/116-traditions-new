@@ -1,5 +1,6 @@
-I'm still styling a lot of it obviously, but there are spaces for the leaderboard, insterstitial, and one box ad. Other box ad will be added later once I have more traditions (it will probably go after #40).
+There are spaces for the leaderboard, insterstitial, and two box ads.
+Data is not quite yet finalized for things like results and the featured text.
 
-Still need to style for mobile as well to some extent.
+Finishing up styling for mobile/tablet, but desktop styling is mostly done.
+Also still trying to make the Share buttons more sophisticated.
 
-The Share buttons are going in the div with id='status container'
