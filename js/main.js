@@ -148,6 +148,34 @@ FeaturedTraditionMap.FeaturedTradition = function(name) {
 };
 
 
+// Set the initial content of the featured div
+// Generate random number between 
+var initialIndex = Math.floor(Math.random() * 15);
+
+// FOR LOOP TURNS OFF THE selected-trad-number class from the other icons
+for (TraditionObj in FeaturedTraditionMap) {
+	if (TraditionObj.index===initialIndex) {
+		// If there's a video, display a video
+		if(TraditionObj.videoCheck) {
+			switchVideo('#featured-photo',TraditionObj);
+			switchPhotoCredit('#featured-photo-credit',TraditionObj);
+			switchDescription('#featured-text',TraditionObj);
+			switchLink(TraditionObj);
+		}
+		// If there's not video, display the photo
+		else {
+			switchPhoto('#featured-photo',TraditionObj);
+			switchPhotoCredit('#featured-photo-credit',TraditionObj);
+			switchDescription('#featured-text',TraditionObj);
+			switchLink(TraditionObj);
+		}
+		
+	}
+	
+};
+
+
+
 // Event handler for all the "Featured" buttons in the tradiions list
 $('.featured-button').click(function() {
 	var id = $(this).closest("div.tradition").attr("id");
@@ -352,8 +380,20 @@ var tradition27 = {
 	'link':'http://columbiaspectator.com/news/2014/03/11/students-justice-palestine-banner-removal-sparks-debate-free-speech-display-policy'
 };
 
-var tradition44 = {
+var tradition37 = {
 	'index':5,
+	'number':37,
+	'description':'',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/roaree%20high%20five.png',
+	'photoCredit': 'Illustration by Christina Tang',
+	'videoURL':'',
+	'link':'http://columbiaspectator.com/sports'
+};
+
+
+var tradition44 = {
+	'index':6,
 	'number':44,
 	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roof ... it\'ll be the best part of Art Hum, as long as you\'re not afraid of the heights.',
 	'videoCheck':false,
@@ -364,7 +404,7 @@ var tradition44 = {
 };
 
 var tradition47 = {
-	'index':6,
+	'index':7,
 	'number':47,
 	'description':'In April 2012, Daniel Radcliffe came to campus to film "Kill Your Darlings," a Sony Pictures Classics movie about Columbia\'s famed beat writers.',
 	'videoCheck':false,
@@ -375,7 +415,7 @@ var tradition47 = {
 };
 
 var tradition56 = {
-	'index':7,
+	'index':8,
 	'number':56,
 	'description':'Orgo Night is a semesterly event held by the Columbia University Marching Band that happens in Butler 209 at midnight on the first Friday of finals.',
 	'videoCheck':true,
@@ -386,7 +426,7 @@ var tradition56 = {
 };
 
 var tradition57 = {
-	'index':8,
+	'index':9,
 	'number':57,
 	'description':'Started at Barnard in 1978, Take Back the Night aims to create a safe space for sexual assault survivors and to promote discussion about sexual violence on college campuses.',
 	'videoCheck':false,
@@ -397,7 +437,7 @@ var tradition57 = {
 };
 
 var tradition62 = {
-	'index':9,
+	'index':10,
 	'number':62,
 	'description':'',
 	'videoCheck':true,
@@ -408,7 +448,7 @@ var tradition62 = {
 };
 
 var tradition77 = {
-	'index':10,
+	'index':11,
 	'number':77,
 	'description':'',
 	'videoCheck':true,
@@ -418,8 +458,20 @@ var tradition77 = {
 	'link':'http://columbiaspectator.com/tags/bacchanal'
 };
 
+var tradition93 = {
+	'index':12,
+	'number':93,
+	'description':'When Homecoming rolls around in October, show some school spirit and take the free shuttle or the 1 Train to up Baker Athletics Complex, at Broadway and 218th Street.',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//www.youtube.com/embed/3g5L-gVjPP4',
+	'link':'http://spectrum.columbiaspectator.com/sports/what-do-columbia-students-know-about-our-football-team-not-much'
+};
+
+
 var tradition100 = {
-	'index':11,
+	'index':13,
 	'number':100,
 	'description':'Every December, Columbia hangs lights on the trees of College Walk and holds a celebration the first night they\'re turned on.',
 	'videoCheck':true,
@@ -430,7 +482,7 @@ var tradition100 = {
 };
 
 var tradition116 = {
-	'index':12,
+	'index':14,
 	'number':116,
 	'description':'Every May, Low Plaza and South Lawn fill up with light blue robes and eager friends and family for the University Commencement ceremony.',
 	'videoCheck':false,
@@ -445,12 +497,14 @@ FeaturedTraditionMap['no-15'] = new FeaturedTraditionMap.FeaturedTradition(tradi
 FeaturedTraditionMap['no-20'] = new FeaturedTraditionMap.FeaturedTradition(tradition20);
 FeaturedTraditionMap['no-26'] = new FeaturedTraditionMap.FeaturedTradition(tradition26);
 FeaturedTraditionMap['no-27'] = new FeaturedTraditionMap.FeaturedTradition(tradition27);
+FeaturedTraditionMap['no-37'] = new FeaturedTraditionMap.FeaturedTradition(tradition37);
 FeaturedTraditionMap['no-44'] = new FeaturedTraditionMap.FeaturedTradition(tradition44);
 FeaturedTraditionMap['no-47'] = new FeaturedTraditionMap.FeaturedTradition(tradition47);
 FeaturedTraditionMap['no-56'] = new FeaturedTraditionMap.FeaturedTradition(tradition56);
 FeaturedTraditionMap['no-57'] = new FeaturedTraditionMap.FeaturedTradition(tradition57);
 FeaturedTraditionMap['no-62'] = new FeaturedTraditionMap.FeaturedTradition(tradition62);
 FeaturedTraditionMap['no-77'] = new FeaturedTraditionMap.FeaturedTradition(tradition77);
+FeaturedTraditionMap['no-93'] = new FeaturedTraditionMap.FeaturedTradition(tradition93);
 FeaturedTraditionMap['no-100'] = new FeaturedTraditionMap.FeaturedTradition(tradition100);
 FeaturedTraditionMap['no-116'] = new FeaturedTraditionMap.FeaturedTradition(tradition116);
 
