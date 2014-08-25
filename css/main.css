@@ -406,7 +406,7 @@ body {
 	margin: 0 0.1rem;
 	border: 0.15rem outset #999999;
 	border-radius: 0.5rem;
-	background-color: #ef8e21;
+	background-color: #6699CC;
 }
 
 /*Toggled class for green checked symbol*/
@@ -491,8 +491,8 @@ body {
 	height: calc(100% - 3rem);
 	width: calc((100% - 1rem)/10*7);
 	vertical-align: top;
-	border: 0.15rem solid #999999;
-	border-radius: 0.8rem;
+	/* border: 0.15rem solid #999999;
+	border-radius: 0.8rem; */
 	padding: 1%;
 }
 
@@ -521,8 +521,8 @@ body {
 	height: calc(100% - 3rem);
 	width: calc((100% - 1rem)/10*3);
 	vertical-align: top;
-	border: 0.15rem solid #999999;
-	border-radius: 0.8rem;
+	/* border: 0.15rem solid #999999;
+	border-radius: 0.8rem; */
 	padding: 1%;
 }
 

@@ -148,38 +148,10 @@ FeaturedTraditionMap.FeaturedTradition = function(name) {
 };
 
 
-// Set the initial content of the featured div
-// Generate random number between 
-var initialIndex = Math.floor(Math.random() * 15);
-
-// FOR LOOP TURNS OFF THE selected-trad-number class from the other icons
-for (TraditionObj in FeaturedTraditionMap) {
-	if (TraditionObj.index===initialIndex) {
-		// If there's a video, display a video
-		if(TraditionObj.videoCheck) {
-			switchVideo('#featured-photo',TraditionObj);
-			switchPhotoCredit('#featured-photo-credit',TraditionObj);
-			switchDescription('#featured-text',TraditionObj);
-			switchLink(TraditionObj);
-		}
-		// If there's not video, display the photo
-		else {
-			switchPhoto('#featured-photo',TraditionObj);
-			switchPhotoCredit('#featured-photo-credit',TraditionObj);
-			switchDescription('#featured-text',TraditionObj);
-			switchLink(TraditionObj);
-		}
-		
-	}
-	
-};
-
-
-
 // Event handler for all the "Featured" buttons in the tradiions list
 $('.featured-button').click(function() {
 	var id = $(this).closest("div.tradition").attr("id");
-	var longid = "featured-"+id;
+	var longid = "#featured-"+id;
 	
 	var TraditionObj = FeaturedTraditionMap[id];
 	
@@ -208,6 +180,9 @@ $('.featured-button').click(function() {
 		switchDescription('#featured-text',TraditionObj);
 		switchLink(TraditionObj);
 	}
+	
+	// sets currentIndex to the index corresponding to the tradition being displayed
+	currentIndex = $.inArray(TraditionObj.number,indexArray);
 });
 
 
@@ -230,10 +205,6 @@ $('.featured-trad-number').click(function() {
 	// TURNS ON THE selected-trad-number class for the icon that was clicked
 	$(this).toggleClass('selected-trad-number');
 	
-	// Scrolls to the corresponding tradition in the checklist
-	id = "#"+id;
-	$(".traditions-container").mCustomScrollbar("scrollTo",id);
-	
 	// If there's a video, display a video
 	if(TraditionObj.videoCheck) {
 		switchVideo('#featured-photo',TraditionObj);
@@ -248,6 +219,13 @@ $('.featured-trad-number').click(function() {
 		switchDescription('#featured-text',TraditionObj);
 		switchLink(TraditionObj);
 	}
+	
+	// sets currentIndex to the index corresponding to the tradition being displayed
+	currentIndex = $.inArray(TraditionObj.number,indexArray);
+	
+	// Scrolls to the corresponding tradition in the checklist
+	id = "#"+id;
+	$(".traditions-container").mCustomScrollbar("scrollTo",id);
 	
 });
 
@@ -323,7 +301,47 @@ function switchVideo(container,TraditionObj) {
 };
 
 
-// ALL THE DATA FOR THE FEATURED TRADITIONS
+// Set the initial content of the featured div
+function setFeature(currentIndex,indexArray) {
+	var id = "no-"+indexArray[currentIndex];
+	var idlong = "#featured-"+id;
+	
+	var TraditionObj = FeaturedTraditionMap[id];
+	
+	// FOR LOOP TURNS OFF THE selected-trad-number class from the other icons
+	for (object in FeaturedTraditionMap) {
+		var idcheck = "#featured-"+object;
+		if ($(idcheck).hasClass('selected-trad-number')) {
+			$(idcheck).toggleClass('selected-trad-number');
+		}
+	};
+	
+	$(idlong).toggleClass('selected-trad-number');
+	
+	// If there's a video, display a video
+	if(TraditionObj.videoCheck) {
+		switchVideo('#featured-photo',TraditionObj);
+		switchPhotoCredit('#featured-photo-credit',TraditionObj);
+		switchDescription('#featured-text',TraditionObj);
+		switchLink(TraditionObj);
+	}
+	// If there's not video, display the photo
+	else {
+		switchPhoto('#featured-photo',TraditionObj);
+		switchPhotoCredit('#featured-photo-credit',TraditionObj);
+		switchDescription('#featured-text',TraditionObj);
+		switchLink(TraditionObj);
+	}
+	
+	// Scrolls to the corresponding tradition in the checklist
+	id = "#"+id;
+	$(".traditions-container").mCustomScrollbar("scrollTo",id);
+};
+
+
+/****************************************************
+ * All the data for the featured traditions that will show up in Featured Traditions box 
+ ****************************************************/
 
 var tradition7 = {
 	'index':0,
@@ -507,4 +525,36 @@ FeaturedTraditionMap['no-77'] = new FeaturedTraditionMap.FeaturedTradition(tradi
 FeaturedTraditionMap['no-93'] = new FeaturedTraditionMap.FeaturedTradition(tradition93);
 FeaturedTraditionMap['no-100'] = new FeaturedTraditionMap.FeaturedTradition(tradition100);
 FeaturedTraditionMap['no-116'] = new FeaturedTraditionMap.FeaturedTradition(tradition116);
+
+
+
+/****************************************************
+ * Set the initial featured tradition 
+ ****************************************************/
+var currentIndex = Math.floor(Math.random() * 15);
+var indexArray = [7, 15, 20, 26, 27, 37, 44, 47, 56, 57, 62, 77, 93, 100, 116];
+setFeature(currentIndex,indexArray);
+
+
+/****************************************************
+ * Code for previous and next buttons 
+ ****************************************************/
+$('#previous').click(function() {
+	if (currentIndex!=0) {
+		currentIndex = currentIndex - 1;
+		setFeature(currentIndex,indexArray);
+	}
+	
+	// if the currentIndex is 0, nothing happens
+});
+
+$('#next').click(function() {
+	if (currentIndex!=(indexArray.length - 1)) {
+		currentIndex = currentIndex + 1;
+		setFeature(currentIndex,indexArray);
+	}
+	
+	// if the currentIndex is the last element in the array, nothing happens  
+});
+
 
