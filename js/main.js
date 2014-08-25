@@ -468,7 +468,7 @@ var tradition27 = {
 var tradition37 = {
 	'index':5,
 	'number':37,
-	'description':'',
+	'description':'In the 2013-14 school year, Columbia sports teams took home five Ivy League championships. If Baker Athletics Complex is too far, check out the sports like basketball and volleyball that play on campus.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/roaree%20high%20five.png',
 	'photoCredit': 'Illustration by Christina Tang',
@@ -491,7 +491,7 @@ var tradition44 = {
 var tradition47 = {
 	'index':7,
 	'number':47,
-	'description':'In April 2012, Daniel Radcliffe came to campus to film "Kill Your Darlings," a Sony Pictures Classics movie about Columbia\'s famed beat writers.',
+	'description':'In April 2012, Daniel Radcliffe came to campus to film scenes of "Kill Your Darlings," a Sony Pictures Classics movie about Columbia\'s famed Beat writers. Radcliffe, pictured here on Low Plaza in costume, portrayed Allen Ginsberg in the film.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/Brann_Radcliffe-20120405.jpg',
 	'photoCredit': 'David Brann / Senior Staff Photographer',
@@ -524,18 +524,18 @@ var tradition57 = {
 var tradition62 = {
 	'index':10,
 	'number':62,
-	'description':'',
+	'description':'Whenever a big snowstorm hits, Facebook events for snowball fights on South Lawn are bound to appear. During one such snowball fight in January 2014, a CNN reporter was caught in the crossfire on live television.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
 	'videoURL':'http://www.cnn.com/video/api/embed.html#/video/bestoftv/2014/01/22/ac-carroll-snowball-fight.cnn',
-	'link':'http://www.cnn.com/video/api/embed.html#/video/bestoftv/2014/01/22/ac-carroll-snowball-fight.cnn'
+	'link':'http://spectrum.columbiaspectator.com/spectrum/on-the-art-of-reporting-amidst-a-snowball-fight-and-other-news'
 };
 
 var tradition77 = {
 	'index':11,
 	'number':77,
-	'description':'',
+	'description':'Bacchanal is a free spring concert that takes place on Low Plaza. Some of the more popular headliners in recent years include Snoop Dogg, Macklemore, and Wiz Khalifa.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
@@ -546,7 +546,7 @@ var tradition77 = {
 var tradition93 = {
 	'index':12,
 	'number':93,
-	'description':'When Homecoming rolls around in October, show some school spirit and take the free shuttle or the 1 Train to up Baker Athletics Complex, at Broadway and 218th Street.',
+	'description':'When Homecoming rolls around in October, show some school spirit and take the free shuttle or the 1 Train up to Baker Athletics Complex, at Broadway and 218th Street. Don\'t know much about sports? That\'s OK. Neither do the people in this video.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
@@ -558,7 +558,7 @@ var tradition93 = {
 var tradition100 = {
 	'index':13,
 	'number':100,
-	'description':'Every December, Columbia hangs lights on the trees of College Walk and holds a celebration the first night they\'re turned on.',
+	'description':'Every winter, College Walk is illuminated by the glow of lights hung on the campus\'s trees. At the end of November or the beginning of December, students come together for the festive Tree Lighting and Yule Log ceremonies.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',

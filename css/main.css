@@ -442,12 +442,12 @@ body {
 	display:inline-block;
 	/* height: 15.625rem; */
 	width: 45%;
-	margin: 0 auto;
+	margin: 0 1rem 0 0;
 	vertical-align: top;
 	box-sizing:border-box;
-	padding: 2%;
-	border: 0.15rem dotted #999999;
-	border-radius: 0.8rem;
+	padding: 0.3rem;
+	border-right: 0.15rem dotted #999999;
+	/* border-radius: 0.8rem;*/
 }
 
 .count-text {
@@ -499,8 +499,8 @@ body {
 	margin: 1rem;
 	margin-top: 0;
 	padding: 0.5rem;
-	border: .15rem dotted #999999;
-	border-radius: 0.8rem;
+	border-bottom: .15rem dotted #999999;
+	/* border-radius: 0.8rem; */
 }
 
 #featured-photo-container {
