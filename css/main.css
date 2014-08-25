@@ -654,6 +654,29 @@ a.featured-link:hover {
 
 
 /* ==========================================================================
+   3.5 Share Button Styles
+   ========================================================================== */
+
+.fb_iframe_widget {
+display: inline-block;
+height: 1rem;
+margin-top: -0.1rem;
+width: 6rem;
+padding: 0;
+vertical-align: top;
+}
+
+/*#twitter-widget-0 {
+	vertical-align: top;
+}
+*/
+
+.twitter-button {
+	display:inline-block;
+	vertical-align:top;
+}
+
+/* ==========================================================================
    4.0 Media Queries
    ========================================================================== */
 
