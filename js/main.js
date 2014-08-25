@@ -151,8 +151,20 @@ FeaturedTraditionMap.FeaturedTradition = function(name) {
 // Event handler for all the "Featured" buttons in the tradiions list
 $('.featured-button').click(function() {
 	var id = $(this).closest("div.tradition").attr("id");
+	var longid = "featured-"+id;
 	
 	var TraditionObj = FeaturedTraditionMap[id];
+	
+	// FOR LOOP TURNS OFF THE selected-trad-number class from the other icons
+	for (object in FeaturedTraditionMap) {
+		var idcheck = "#featured-"+object;
+		if ($(idcheck).hasClass('selected-trad-number')) {
+			$(idcheck).toggleClass('selected-trad-number');
+		}
+	};
+	
+	$(longid).toggleClass('selected-trad-number');
+	
 	
 	// If there's a video, display a video
 	if(TraditionObj.videoCheck) {
@@ -170,6 +182,7 @@ $('.featured-button').click(function() {
 	}
 });
 
+
 // Event handler for all the tradition number icons in the featured box
 $('.featured-trad-number').click(function() {
 	var id = $(this).attr("id");
@@ -178,18 +191,20 @@ $('.featured-trad-number').click(function() {
 	
 	var TraditionObj = FeaturedTraditionMap[id];
 	
-	
+	// FOR LOOP TURNS OFF THE selected-trad-number class from the other icons
 	for (object in FeaturedTraditionMap) {
-		console.log(object);
 		var idcheck = "#featured-"+object;
-		console.log(idcheck);
 		if ($(idcheck).hasClass('selected-trad-number')) {
 			$(idcheck).toggleClass('selected-trad-number');
 		}
 	};
 	
+	// TURNS ON THE selected-trad-number class for the icon that was clicked
 	$(this).toggleClass('selected-trad-number');
 	
+	// Scrolls to the corresponding tradition in the checklist
+	id = "#"+id;
+	$(".traditions-container").mCustomScrollbar("scrollTo",id);
 	
 	// If there's a video, display a video
 	if(TraditionObj.videoCheck) {
@@ -305,7 +320,7 @@ var tradition15 = {
 };
 
 var tradition20 = {
-	'index':3,
+	'index':2,
 	'number':20,
 	'description':'The Varsity Show, a full-length musical put on by students at the end of every spring semester since 1984, is one of Columbia\'s longest ongoing traditions.',
 	'videoCheck':true,
@@ -316,7 +331,7 @@ var tradition20 = {
 };
 
 var tradition26 = {
-	'index':4,
+	'index':3,
 	'number':26,
 	'description':'During the 2013-14 school year, student activism centered around Columbia\'s sexual assault policy. One of the most visible events was a freeze mob on College walk in November 2013 during which students held signs like the one pictured here.',
 	'videoCheck':false,
@@ -327,7 +342,7 @@ var tradition26 = {
 };
 
 var tradition27 = {
-	'index':5,
+	'index':4,
 	'number':27,
 	'description':'In Spring 2014, the controversial decision by the Barnard administration to remove a Students for Justice in Palestine banner led to a series of protests and counterprotests by pro-Israeli and pro-Palestinian student groups on College Walk.',
 	'videoCheck':false,
@@ -338,7 +353,7 @@ var tradition27 = {
 };
 
 var tradition44 = {
-	'index':6,
+	'index':5,
 	'number':44,
 	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roof ... it\'ll be the best part of Art Hum, as long as you\'re not afraid of the heights.',
 	'videoCheck':false,
@@ -349,7 +364,7 @@ var tradition44 = {
 };
 
 var tradition47 = {
-	'index':7,
+	'index':6,
 	'number':47,
 	'description':'In April 2012, Daniel Radcliffe came to campus to film "Kill Your Darlings," a Sony Pictures Classics movie about Columbia\'s famed beat writers.',
 	'videoCheck':false,
@@ -381,8 +396,19 @@ var tradition57 = {
 	'link':'http://columbiaspectator.com/tags/take-back-night'
 };
 
-var tradition77 = {
+var tradition62 = {
 	'index':9,
+	'number':62,
+	'description':'',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'http://www.cnn.com/video/api/embed.html#/video/bestoftv/2014/01/22/ac-carroll-snowball-fight.cnn',
+	'link':'http://www.cnn.com/video/api/embed.html#/video/bestoftv/2014/01/22/ac-carroll-snowball-fight.cnn'
+};
+
+var tradition77 = {
+	'index':10,
 	'number':77,
 	'description':'',
 	'videoCheck':true,
@@ -393,7 +419,7 @@ var tradition77 = {
 };
 
 var tradition100 = {
-	'index':10,
+	'index':11,
 	'number':100,
 	'description':'Every December, Columbia hangs lights on the trees of College Walk and holds a celebration the first night they\'re turned on.',
 	'videoCheck':true,
@@ -404,7 +430,7 @@ var tradition100 = {
 };
 
 var tradition116 = {
-	'index':11,
+	'index':12,
 	'number':116,
 	'description':'Every May, Low Plaza and South Lawn fill up with light blue robes and eager friends and family for the University Commencement ceremony.',
 	'videoCheck':false,
@@ -423,6 +449,7 @@ FeaturedTraditionMap['no-44'] = new FeaturedTraditionMap.FeaturedTradition(tradi
 FeaturedTraditionMap['no-47'] = new FeaturedTraditionMap.FeaturedTradition(tradition47);
 FeaturedTraditionMap['no-56'] = new FeaturedTraditionMap.FeaturedTradition(tradition56);
 FeaturedTraditionMap['no-57'] = new FeaturedTraditionMap.FeaturedTradition(tradition57);
+FeaturedTraditionMap['no-62'] = new FeaturedTraditionMap.FeaturedTradition(tradition62);
 FeaturedTraditionMap['no-77'] = new FeaturedTraditionMap.FeaturedTradition(tradition77);
 FeaturedTraditionMap['no-100'] = new FeaturedTraditionMap.FeaturedTradition(tradition100);
 FeaturedTraditionMap['no-116'] = new FeaturedTraditionMap.FeaturedTradition(tradition116);
