@@ -49,17 +49,6 @@
 					
 					<div class="leaderboard">LEADERBOARD</div>
 					
-					<div class="social-button-bar clearfix">
-						<!-- Neex to change data-href value -->
-						<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-						<div class="twitter-button">
-							<a href="https://twitter.com/share" class="twitter-share-button" data-text="How many of Columbia's 116 traditions have you completed?" data-via="ColumbiaSpec" data-count="none" data-hashtags="116Traditions" data-dnt="true">Tweet</a>
-							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-							</script>
-						</div>
-						<div class="g-plusone" data-size="tall" data-annotation="none" data-href="http://www.columbiaspectator.com/"></div>
-					</div>
-					
 					<div id="featured-content-container">
 						<div class="section-title">
 							Featured Traditions
@@ -97,9 +86,22 @@
 						<div class="section-title">Your Count</div>
 						<div id="inner-count-container">
 							<div class="count-text">Once you've marked the traditions you've completed in the checklist, find out how many you've done.</div>
-							<div class="count-text hidden"><span id="counter">0</span> of 116 Columbia traditions completed</div>
 						</div>
+						<div id="social-button-bar clearfix">
+							<!-- Need to change data-href value -->
+							<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+							<div class="twitter-button">
+								<a href="https://twitter.com/share" class="twitter-share-button" data-text="How many of Columbia's 116 traditions have you completed?" data-via="ColumbiaSpec" data-count="none" data-hashtags="116Traditions" data-dnt="true">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+								</script>
+							</div>
+							<div class="g-plusone" data-size="tall" data-annotation="none" data-href="http://www.columbiaspectator.com/"></div>
+						</div>
+						<div class="count-text" id="custom-message-text"></div>
 						<button id="calculate-button">How many traditions have you completed?</button>
+						
+
+						
 					</div>
 					
 					<div class="interstitial-ad">INTERSTITIAL</div>

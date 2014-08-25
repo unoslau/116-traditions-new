@@ -440,8 +440,8 @@ body {
 /* Div in which count and sharing buttons will go*/
 #count-container {
 	display:inline-block;
-	height: 15.625rem;
-	width: 18.75rem;
+	/* height: 15.625rem; */
+	width: 45%;
 	margin: 0 auto;
 	vertical-align: top;
 	box-sizing:border-box;
@@ -451,15 +451,28 @@ body {
 }
 
 .count-text {
-	margin: 0 auto 0.5rem;
+	margin: 0 auto 1rem;
+	text-align: center;
+	font-size: 0.9rem;
+	display: inline-block;
+	width: 90%;
+}
+
+.results-text {
+	margin: 0 auto 1rem;
 	text-align: left;
-	font-size: 0.9em;
+	font-size: 1.5rem;
+	line-height:1.8rem;
+	font-weight:600;
 	display: inline-block;
 	width: 90%;
 }
 
 #counter {
 	font-size: 3rem;
+	color: #6699cc;
+	font-weight: 600;
+	line-height: 3rem;
 }
 
 #calculate-button {
@@ -484,6 +497,7 @@ body {
 	width: calc(100% - 2rem);
 	height: 25rem;
 	margin: 1rem;
+	margin-top: 0;
 	padding: 0.5rem;
 	border: .15rem dotted #999999;
 	border-radius: 0.8rem;
@@ -579,10 +593,13 @@ body {
 	background-position:top center;
 }
 
-.social-button-bar {
+#social-button-bar {
+	display:inline-block;
+	box-sizing:border-box;
 	height: 3 rem;
-	width: 45.5rem;
-	background-color:#4CA454;
+	width: 100%;
+	padding-right:3%;
+	padding-left:3%;
 	margin: 1rem auto;
 }
 

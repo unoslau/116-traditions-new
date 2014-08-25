@@ -139,9 +139,49 @@ $(document).ready(function() {
 		
 		$('#inner-count-container').animate({opacity: 0}, 'slow', function() {
         	$('#inner-count-container').empty();
-        	var str = '<div class="count-text"><span id="counter">'+countComplete+'</span> of 116 Columbia traditions completed</div>';
+        	var str = '<div class="results-text"><span id="counter">'+countComplete+'</span> of 116 Columbia traditions completed</div>';
   			$('#inner-count-container').append(str);
   			
+  			var customMessage;
+  			if(countComplete==0) {
+  				customMessage = 'You don\'t even go here.';
+  			}
+  			else if(countComplete<=10) {
+  				customMessage = '"Firs\'-years over here!" — Rubeus Hagrid';
+  			}
+  			else if(countComplete<=20) {
+  				customMessage = 'You\'re a Lion cub. You\'re learning, you\'re growing, you\'re seeing the world.';
+  			}
+  			else if(countComplete<=30) {
+  				customMessage = '';
+  			}
+  			else if(countComplete<=40) {
+  				customMessage = 'You\'re PrezBo or DSpar (take your pick). You make appearances at a few big events each year, but are mostly absent from student life.';
+  			}
+  			else if(countComplete<=57) {
+  				customMessage = 'You\'re Columbia football head coach Pete Mangurian. You’re trying, but you just haven’t gotten to .500.';
+  			}
+  			else if(countComplete==58) {
+  				customMessage = 'You\'re at exactly 50 percent, the mean score on the orgo final.';
+  			}
+  			else if(countComplete<=71) {
+  				customMessage = 'You\'re Roar-ee. You’re very involved in campus life.';
+  			}
+  			else if(countComplete<=89) {
+  				customMessage = 'You\'re an overachiever. You’re that kid who reads all the books and does all the work, even though the lower grade the professor will give is a B+ anyway. Serious props for getting this far.';
+  			}
+  			else if(countComplete<=105) {
+  				customMessage = 'You\'re either Jerry Sherwin or Wm. Theodore de Bary. You’ve been here forever and you\'ve done basically everything.';
+  			}
+  			else if(countComplete<=116) {
+  				customMessage = 'Congratulations! You\'re the second coming of Alma Mater. You bleed Light Blue and can\'t help but break out into the Columbia fight song several times a day.';
+  			}
+  			
+  			
+  			$('#custom-message-text').text(customMessage);
+  			
+  			// var message = "I have completed "+countComplete+" of 116 Columbia traditions";
+
   			if($('#calculate-button').text()!="Recalculate Count") {
   				$('#calculate-button').text("Recalculate Count");
   			}
@@ -440,7 +480,7 @@ var tradition37 = {
 var tradition44 = {
 	'index':6,
 	'number':44,
-	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roof ... it\'ll be the best part of Art Hum, as long as you\'re not afraid of the heights.',
+	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roof ... ther vertical tour of St. John the Divine will be the best part of Art Hum, as long as you\'re not afraid of the heights.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/StJohns.jpg',
 	'photoCredit': 'Justin Chan / Senior Staff Photographer',
