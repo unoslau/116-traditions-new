@@ -174,9 +174,8 @@ body {
 }
 
 .addthis_sharing_toolbox {
-	float:center;
+	float:left;
 	margin-top:0.5rem;
-	height:1rem;
 	display:block;
 }
 
