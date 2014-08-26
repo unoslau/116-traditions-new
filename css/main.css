@@ -202,6 +202,9 @@ body {
 @media only screen and (min-width: 769px) {
 	.left-container {
 		width: 35%;
+		height: -moz-calc(100% - 3em);
+		height: -webkit-calc(100% - 3em);
+		height: -o-calc(100% - 3em);
 		height: calc(100% - 3rem); /*Sets height based on the margin-top*/
 		max-width: 26.25rem;
 		padding: 0.5em 0.5em 0.2em;
@@ -215,6 +218,9 @@ body {
 	
 	.right-container {
 		width: 65%;
+		height: -moz-calc(100% - 3em);
+		height: -webkit-calc(100% - 3em);
+		height: -o-calc(100% - 3em);
 		height: calc(100% - 3rem); /*Sets height based on the margin-top*/
 		max-width: 48.75rem;
 		position: absolute;
@@ -303,6 +309,9 @@ body {
 /* The div containing all 116 traditions*/
 .traditions-container {
 	width: 100%;
+	height: -moz-calc(100% - 8rem);
+	height: -webkit-calc(100% - 8rem);
+	height: -o-calc(100% - 8rem);
 	height: calc(100% - 8rem); /*7rem for button panel height, plus room for padding and white space on bottom*/
 	overflow: auto;
 	padding-top: 0.2rem;
@@ -461,6 +470,9 @@ body {
 #featured-content-container {
 	display:inline-block;
 	box-sizing:border-box;
+	width: -moz-calc(100% - 2rem);
+	width: -webkit-calc(100% - 2rem);
+	width: -o-calc(100% - 2rem);
 	width: calc(100% - 2rem);
 	height: 26rem;
 	margin: 1rem;
@@ -478,7 +490,13 @@ body {
 #featured-photo-container {
 	display:inline-block;
 	box-sizing:border-box;
+	height: -moz-calc(100% - 4rem);
+	height: -webkit-calc(100% - 4rem);
+	height: -o-calc(100% - 4rem);
 	height: calc(100% - 4rem);
+	width: -moz-calc((100% - 1rem)/10*7);
+	width: -webkit-calc((100% - 1rem)/10*7);
+	width: -o-calc((100% - 1rem)/10*7);
 	width: calc((100% - 1rem)/10*7);
 	vertical-align: top;
 	/* border: 0.15rem solid #999999;
@@ -489,6 +507,9 @@ body {
 #featured-photo {
 	display:inline-block;
 	width: 100%;
+	height: -moz-calc(100% - 0.8rem);
+	height: -webkit-calc(100% - 0.8rem);
+	height: -o-calc(100% - 0.8rem);
 	height: calc(100% - 0.8rem);
 	margin-bottom: -0.7rem;
 	background-size:cover;
@@ -508,7 +529,13 @@ body {
 #featured-text-container {
 	display:inline-block;
 	box-sizing:border-box;
+	height: -moz-calc(100% - 4rem);
+	height: -webkit-calc(100% - 4rem);
+	height: -o-calc(100% - 4rem);
 	height: calc(100% - 4rem);
+	width: -moz-calc((100% - 1rem)/10*3);
+	width: -webkit-calc((100% - 1rem)/10*3);
+	width: -o-calc((100% - 1rem)/10*3);
 	width: calc((100% - 1rem)/10*3);
 	vertical-align: top;
 	/* border: 0.15rem solid #999999;
@@ -519,6 +546,9 @@ body {
 #featured-text {
 	display:inline-block;
 	box-sizing:border-box;
+	height: -moz-calc(100% - 3rem);
+	height: -webkit-calc(100% - 3rem);
+	height: -o-calc(100% - 3rem);
 	height: calc(100% - 3rem);
 	width: 100%;
 	vertical-align: top;
@@ -723,10 +753,16 @@ a.featured-link:hover {
 	
 	#featured-text-container {
 		font-size: 0.9rem;
+		height: -moz-calc(100% - 5rem);
+		height: -webkit-calc(100% - 5rem);
+		height: -o-calc(100% - 5rem);
 		height: calc(100% - 5rem);
 	}
 	
 	#featured-photo-container {
+		height: -moz-calc(100% - 5rem);
+		height: -webkit-calc(100% - 5rem);
+		height: -o-calc(100% - 5rem);
 		height: calc(100% - 5rem);
 	}
 }
@@ -741,6 +777,9 @@ a.featured-link:hover {
 	}
 	
 	.traditions-container {
+		height: -moz-calc(100% - 9.2rem);
+		height: -webkit-calc(100% - 9.2rem);
+		height: -o-calc(100% - 9.2rem);
 		height: calc(100% - 9.2rem);
 	}
 	
@@ -762,6 +801,9 @@ a.featured-link:hover {
 	}
 	
 	.traditions-container {
+		height: -moz-calc(100% - 10rem);
+		height: -webkit-calc(100% - 10rem);
+		height: -o-calc(100% - 10rem);
 		height: calc(100% - 10rem);
 	}
 	
