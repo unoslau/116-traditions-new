@@ -645,7 +645,7 @@ a.featured-link:hover {
 
 
 .leaderboard {
-	height: 5.625rem;
+	height: auto;
 	width: 93.34%;  /*NEED TO USE % FOR HEIGHT IF USE % FOR WIDTH? */
 	/* width: 45.5rem; */
 	background-color:#E44D26;
@@ -653,6 +653,11 @@ a.featured-link:hover {
 	margin: 1rem auto;
 }
 
+.leaderboard > a > img {
+	width: 100%;
+	height: auto;
+	margin-left: 0;
+}
 
 .box-ad {
 	height: 15.625rem;
@@ -667,7 +672,8 @@ a.featured-link:hover {
 	height: 15.625rem;
 	width: 18.75rem;
 	background-color:#E44D26;
-	margin: 0 auto;	
+	margin: 0 auto;
+	margin-bottom: 2rem;
 }
 
 
@@ -679,6 +685,7 @@ a.featured-link:hover {
 display: inline-block;
 height: 1rem;
 margin-top: -0.1rem;
+margin-bottom: 0.3rem;
 width: 6rem;
 padding: 0;
 vertical-align: top;
@@ -719,6 +726,7 @@ vertical-align: top;
     }
     
     .leaderboard {
+    	width:100%;
     	margin: 0.7rem auto;
     }
     
@@ -745,6 +753,7 @@ vertical-align: top;
     
     .interstitial-ad {
     	display: block;
+    	margin-bottom:0;
     }
     
     #instructions {
