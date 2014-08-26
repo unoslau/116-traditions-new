@@ -13,9 +13,9 @@
 		<!-- FACEBOOK OPEN GRAPH TAGS -->
 		<meta property="og:title" content="116 Traditions" />
 		<meta property="og:site_name" content="Columbia Daily Spectator" />
-		<!-- <meta property="og:url" content="" /> -->
-		<meta property="og:description" content="How many of Columbia's 116 traditions have you completed? What's left to check off your list? Use the Columbia Daily Spectator's interactive feautre to find out." />
-		<!-- <meta property="og:image" content="" /> -->
+		<meta property="og:url" content="http://www.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/" />
+		<meta property="og:description" content="How many of Columbia's 116 traditions have you completed? What's left to check off your list? Use the Columbia Daily Spectator's interactive 116 traditions feature to find out." />
+		<meta property="og:image" content="http://columbiaspectator.com/sites/default/files/116_trad_graphic.jpg" />
 		<meta property="fb:app_id" content="799523286766152" />
 		<meta property="og:type" content="article" />
 		<meta property="article:author" content="https://www.facebook.com/columbiaspectator" />
@@ -26,9 +26,12 @@
 		<meta name="twitter:site" content="@ColumbiaSpec">
 		<meta name="twitter:creator" content="@ColumbiaSpec">
 		<meta name="twitter:title" content="116 Traditions">
-		<meta name="twitter:description" content="How many of Columbia's 116 traditions have you completed? What's left to check off your list? Use the Columbia Daily Spectator's interactive feautre to find out.">
-		<!-- <meta name="twitter:image:src" content=""> -->
+		<meta name="twitter:description" content="How many of Columbia's 116 traditions have you completed? What's left to check off your list? Use the Columbia Daily Spectator's interactive 116 traditions feature to find out.">
+		<meta name="twitter:url" content="http://www.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/" />
+		<meta name="twitter:image:src" content="http://columbiaspectator.com/sites/default/files/116_trad_graphic.jpg">
 		
+		<meta name="dcterms.format" content="text/html" />
+		<link rel="shortcut icon" href="http://columbiaspectator.com/sites/default/files/crown_48.ico" type="image/vnd.microsoft.icon" />
 		
 		<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7429872/799144/css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="jquery.mCustomScrollbar.css" />
@@ -96,7 +99,8 @@
 					
 					<div id="featured-content-container">
 						<div class="section-title">
-							Featured Traditions
+							<div id="featured-traditions-title">Featured Traditions</div>
+							<!-- <div class="featured-trad-number" id="featured-no-3">3</div> -->
 							<div class="featured-trad-number" id="featured-no-7">7</div>
 							<div class="featured-trad-number" id="featured-no-15">15</div>
 							<div class="featured-trad-number" id="featured-no-20">20</div>
@@ -104,11 +108,16 @@
 							<div class="featured-trad-number" id="featured-no-27">27</div>
 							<div class="featured-trad-number" id="featured-no-37">37</div>
 							<div class="featured-trad-number" id="featured-no-44">44</div>
+							<div class="featured-trad-number" id="featured-no-45">45</div>
 							<div class="featured-trad-number" id="featured-no-47">47</div>
 							<div class="featured-trad-number" id="featured-no-56">56</div>
 							<div class="featured-trad-number" id="featured-no-57">57</div>
+							<div class="featured-trad-number" id="featured-no-61">61</div>
 							<div class="featured-trad-number" id="featured-no-62">62</div>
+							<div class="featured-trad-number" id="featured-no-67">67</div>
+							<div class="featured-trad-number" id="featured-no-71">71</div>
 							<div class="featured-trad-number" id="featured-no-77">77</div>
+							<div class="featured-trad-number" id="featured-no-88">88</div>
 							<div class="featured-trad-number" id="featured-no-93">93</div>
 							<div class="featured-trad-number" id="featured-no-100">100</div>
 							<div class="featured-trad-number" id="featured-no-116">116</div>
@@ -136,14 +145,16 @@
 						</div>
 						<div id="social-button-bar clearfix">
 							<!-- Need to change data-href value -->
-							<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+							<div class="fb-like" data-href="http://www.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 							<div class="twitter-button">
 								<a href="https://twitter.com/share" class="twitter-share-button" data-text="How many of Columbia's 116 traditions have you completed?" data-via="ColumbiaSpec" data-count="none" data-hashtags="116Traditions" data-dnt="true">Tweet</a>
 								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 								</script>
 							</div>
-							<div class="g-plusone" data-size="tall" data-annotation="none" data-href="http://www.columbiaspectator.com/"></div>
+							<div class="g-plusone" data-size="tall" data-annotation="none" data-href="http://www.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/"></div>
 						</div>
+						<!-- Go to www.addthis.com/dashboard to customize your tools -->
+						<!-- <div class="addthis_native_toolbox"></div> -->
 						<div class="count-text" id="custom-message-text"></div>
 						<button id="calculate-button">How many traditions have you completed?</button>
 						
@@ -205,7 +216,9 @@
 					</div>
 					<div class="tradition clearfix" id="no-3">
 						<div class="trad-number">3</div>
-						<div class="trad-descip">Try to figure out the <a href="http://columbiaspectator.com/2012/02/16/examining-barnard-columbia-relationship">Barnard-Columbia relationship</a>. Give up and realize that students from both sides of Broadway are great.</div>
+						<div class="trad-descip">Try to figure out the <a href="http://columbiaspectator.com/2012/02/16/examining-barnard-columbia-relationship">Barnard-Columbia relationship</a>. Give up and realize that students from both sides of Broadway are great.
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition clearfix" id="no-4">
 						<div class="trad-number">4</div>
@@ -400,7 +413,9 @@
 					</div>
 					<div class="tradition" id="no-45">
 						<div class="trad-number">45</div>
-						<div class="trad-descip">Take part in <a href="http://columbiaspectator.com/news/2014/04/10/seniors-gather-40s-40-42-days-commencement">40s on 40 on Low Steps</a>. If it still exists. If not, pour out a 40 for another casualty of the War on Fun.</div>
+						<div class="trad-descip">Take part in <a href="http://columbiaspectator.com/news/2014/04/10/seniors-gather-40s-40-42-days-commencement">40s on 40 on Low Steps</a>. If it still exists. If not, pour out a 40 for another casualty of the War on Fun.
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-46">
 						<div class="trad-number">46</div>
@@ -470,7 +485,9 @@
 					</div>
 					<div class="tradition" id="no-61">
 						<div class="trad-number">61</div>
-						<div class="trad-descip">Go to the <a href="http://columbiaspectator.com/tags/world-leaders-forum">World Leaders Forum</a> and shake hands with a foreign leader. Bonus points if it’s a brutal autocrat. Alternatively, never manage to sign up in time. Complain about the limited seating anytime Columbia is called a “global university.”</div>
+						<div class="trad-descip">Go to the <a href="http://columbiaspectator.com/tags/world-leaders-forum">World Leaders Forum</a> and shake hands with a foreign leader. Bonus points if it’s a brutal autocrat. Alternatively, never manage to sign up in time. Complain about the limited seating anytime Columbia is called a “global university.”
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-62">
 						<div class="trad-number">62</div>
@@ -496,7 +513,9 @@
 					</div>
 					<div class="tradition" id="no-67">
 						<div class="trad-number">67</div>
-						<div class="trad-descip">Discover previously unidentified substances in the McBain/Carman elevators (see 66).</div>
+						<div class="trad-descip">Discover previously unidentified substances in the McBain/Carman elevators (see 66).
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-68">
 						<div class="trad-number">68</div>
@@ -512,7 +531,9 @@
 					</div>
 					<div class="tradition" id="no-71">
 						<div class="trad-number">71</div>
-						<div class="trad-descip">Jump in the fountains in front of Low Library.</div>
+						<div class="trad-descip">Jump in the fountains in front of Low Library.
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-72">
 						<div class="trad-number">72</div>
@@ -582,7 +603,9 @@
 					</div>
 					<div class="tradition" id="no-88">
 						<div class="trad-number">88</div>
-						<div class="trad-descip">Take Principles of Economics with <a href="http://columbiaspectator.com/tag/sunil-gulati">Sunil Gulati</a>. Become an econ major.</div>
+						<div class="trad-descip">Take Principles of Economics with <a href="http://columbiaspectator.com/tag/sunil-gulati">Sunil Gulati</a>. Become an econ major.
+							<button class="featured-button">Featured</button>
+						</div>
 					</div>
 					<div class="tradition" id="no-89">
 						<div class="trad-number">89</div>
@@ -734,15 +757,10 @@
 			})(jQuery);
 		</script>
 		
+		<!-- MOBILE SHARING BUTTONS -->
+		<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53cad487251df74f"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+		
+		
     </body>
 </html>

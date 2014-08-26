@@ -158,7 +158,7 @@ $(document).ready(function() {
   				customMessage = 'You\'re the kid inside studying during Bacchanal.';
   			}
   			else if(countComplete<=30) {
-  				customMessage = 'You\'re on your way to being the overachiever your mom always knew you were. Meow, Baby Lion, Meow.';
+  				customMessage = 'You\'re on your way to being the overachiever your mom always knew you were. Meow, Baby Lion, meow.';
   			}
   			else if(countComplete<=40) {
   				customMessage = 'You\'re PrezBo or DSpar (take your pick). You make appearances at a few big events each year, but are mostly absent from student life.';
@@ -414,8 +414,21 @@ function setFeature(currentIndex,indexArray) {
 
 
 /****************************************************
- * All the data for the featured traditions that will show up in Featured Traditions box 
+ * All the data for the featured traditions that will show up in Featured Traditions box
  ****************************************************/
+
+/*
+var tradition3 = {
+	'index':0,
+	'number':3,
+	'description':'Tensions between Barnard and Columbia\'s other three undergraduate schools came to a head in 2012 when the decision of President Barack Obama, CC \'83, to speak at Barnard commencement <a href="http://columbiaspectator.com/news/2012/05/06/2011-12-review-obamas-decision-speak-barnard-creates-rift-bumps-gs-class-day">sparked hundreds of misogynistic online comments on Bwog and Spectator that targeted Barnard students</a>.',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/obama_1.jpg',
+	'photoCredit': 'File Photo',
+	'videoURL':'',
+	'link':'http://columbiaspectator.com/news/2012/05/06/2011-12-review-obamas-decision-speak-barnard-creates-rift-bumps-gs-class-day',
+};
+*/
 
 var tradition7 = {
 	'index':0,
@@ -477,12 +490,11 @@ var tradition37 = {
 	'number':37,
 	'description':'In the 2013-14 school year, Columbia sports teams took home five Ivy League championships. If Baker Athletics Complex is too far, check out the sports like <a href="http://columbiaspectator.com/sports/2014/05/11/yir-2013-14-mens-basketball-capped-historic-season-postseason-run">basketball</a> and <a href="http://columbiaspectator.com/sports/volleyball">volleyball</a> that play on campus.',
 	'videoCheck':false,
-	'photoURL':'http://columbiaspectator.com/sites/default/files/roaree%20high%20five.png',
+	'photoURL':'http://columbiaspectator.com/sites/default/files/roaree%20high%20five%20cropped.png',
 	'photoCredit': 'Illustration by Christina Tang',
 	'videoURL':'',
 	'link':'http://columbiaspectator.com/sports'
 };
-
 
 var tradition44 = {
 	'index':6,
@@ -495,8 +507,19 @@ var tradition44 = {
 	'link':'http://columbiaspectator.com/tags/saint-john-divine'
 };
 
-var tradition47 = {
+var tradition45 = {
 	'index':7,
+	'number':45,
+	'description':'40s on 40 is an annual, unofficial celebration typically held 40 days before Commencement, during which <a href="http://columbiaspectator.com/news/2014/04/10/seniors-gather-40s-40-42-days-commencement">seniors gather on Low Steps to drink and reminisce</a>.',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/40s-on-40s3-WEB.jpg',
+	'photoCredit': 'David Brann / Senior Staff Photographer',
+	'videoURL':'',
+	'link':'http://columbiaspectator.com/2013/04/22/seniors-reflect-time-cu-friends-40s',
+};
+
+var tradition47 = {
+	'index':8,
 	'number':47,
 	'description':'In April 2012, <a href="http://columbiaspectator.com/2013/10/18/kill-your-darlings-rediscovering-columbias-bohemians">Daniel Radcliffe came to campus to film scenes of "Kill Your Darlings,"</a> a Sony Pictures Classics movie about Columbia\'s famed <a href="http://www.wikicu.com/Beat_Generation">Beat writers</a>. Radcliffe, pictured here on Low Plaza in costume, portrayed Allen Ginsberg in the film.',
 	'videoCheck':false,
@@ -507,7 +530,7 @@ var tradition47 = {
 };
 
 var tradition56 = {
-	'index':8,
+	'index':9,
 	'number':56,
 	'description':'<a href="http://columbiaspectator.com/2014/05/08/orgo-night-live-blog">Orgo Night</a> is a semesterly event held by the <a href="http://www.wikicu.com/Columbia_University_Marching_Band">Columbia University Marching Band</a> in <a href="http://www.wikicu.com/Butler_209">Butler 209</a> at midnight on the first Friday of finals. The band tells jokes about campus happenings and plays songs to along with its performance.',
 	'videoCheck':true,
@@ -518,7 +541,7 @@ var tradition56 = {
 };
 
 var tradition57 = {
-	'index':9,
+	'index':10,
 	'number':57,
 	'description':'Started at Barnard in 1978, <a href="http://columbiaspectator.com/tags/take-back-night">Take Back the Night</a> aims to create a safe space for sexual assault survivors and to promote discussion about sexual violence on college campuses.',
 	'videoCheck':false,
@@ -528,8 +551,19 @@ var tradition57 = {
 	'link':'http://columbiaspectator.com/tags/take-back-night'
 };
 
+var tradition61 = {
+	'index':11,
+	'number':62,
+	'description':'The World Leaders Forum is an annual series of events held in Low Rotunda, where global thought leaders and heads of state, like Chilean President Sebastián Piñera (pictured), are invited to speak to and engage with students.',
+	'videoCheck':false,
+	'photoURL':'http://columbiaspectator.com/sites/default/files/Chile_Qu_WEB.jpg',
+	'photoCredit': 'Jing Qu for Spectator',
+	'videoURL':'',
+	'link':''
+};
+
 var tradition62 = {
-	'index':10,
+	'index':12,
 	'number':62,
 	'description':'Whenever a big snowstorm hits, Facebook events for snowball fights on South Lawn are bound to appear. During one such snowball fight in January 2014, <a href="http://www.huffingtonpost.com/2014/01/22/reporter-snowballs-cnn-cold-weather_n_4644719.html">a CNN reporter was caught in the crossfire on live television</a>.',
 	'videoCheck':true,
@@ -539,8 +573,30 @@ var tradition62 = {
 	'link':''
 };
 
+var tradition67 = {
+	'index':13,
+	'number':67,
+	'description':'There\'s something special about Carman. Just ask the guys who made <a href="http://columbiaspectator.com/2011/03/30/carman-forever">the "Carman Forever" music video</a>.',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//www.youtube.com/embed/WqFlf6SsYJw?rel=0',
+	'link':''
+};
+
+var tradition71 = {
+	'index':14,
+	'number':67,
+	'description': 'During Bacchanal 2013, Katie Furr (aka Fountain Girl), CC \'14, rose to fame by <a href="http://columbiaspectator.com/2013/04/15/katie-furr-fountain-girl-delivering-splashes-masses">climbing into the upper part of the Low Plaza fountain and splashing water on the crowd</a>. Public Safety waited patiently for her to finish before taking her away.',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//player.vimeo.com/video/64003784?byline=0&amp;portrait=0&amp;color=6699cc&amp;loop=1',
+	'link':''
+};
+
 var tradition77 = {
-	'index':11,
+	'index':15,
 	'number':77,
 	'description':'<a href="http://columbiaspectator.com/tags/bacchanal">Bacchanal</a> is a free spring concert that takes place on Low Plaza. Some of the more popular headliners in recent years include Snoop Dogg, Macklemore, Wiz Khalifa, and Lupe Fiasco.',
 	'videoCheck':true,
@@ -550,8 +606,19 @@ var tradition77 = {
 	'link':''
 };
 
+var tradition88 = {
+	'index':16,
+	'number':88,
+	'description':'In addition to being one of the most popular economics lecturers at Columbia, <a href="http://columbiaspectator.com/tag/sunil-gulati">Sunil Gulati</a> is also the president of the United States Soccer Federadtion and a member of the FIFA Executive Committee. If you still don\'t think he\'s cool, watch his Ice Bucket Challenge video.',
+	'videoCheck':true,
+	'photoURL':'',
+	'photoCredit': '',
+	'videoURL':'//www.youtube.com/embed/EmxcqjQ5rIw?rel=0',
+	'link':''
+};
+
 var tradition93 = {
-	'index':12,
+	'index':17,
 	'number':93,
 	'description':'When <a href="http://columbiaspectator.com/orientation-2014-fall-sports-calendar">Homecoming rolls around in October</a>, show some school spirit and take the free shuttle or the 1 Train up to Baker Athletics Complex, at Broadway and 218th Street. Don\'t know much about sports? That\'s OK. <a href="http://columbiaspectator.com/2012/10/21/what-do-columbia-students-know-about-our-football-team">Neither do the people in this video</a>.',
 	'videoCheck':true,
@@ -563,7 +630,7 @@ var tradition93 = {
 
 
 var tradition100 = {
-	'index':13,
+	'index':18,
 	'number':100,
 	'description':'Every winter, College Walk is illuminated by the glow of lights hung on the campus\'s trees. At the end of November or the beginning of December, students come together for the festive <a href="http://columbiaspectator.com/tags/tree-lighting-ceremony">Tree Lighting and Yule Log ceremonies</a>.',
 	'videoCheck':true,
@@ -574,7 +641,7 @@ var tradition100 = {
 };
 
 var tradition116 = {
-	'index':14,
+	'index':19,
 	'number':116,
 	'description':'Every May, <a href="http://columbiaspectator.com/2014/05/21/slideshow-columbia-university-commencement-2014">Low Plaza and South Lawn fill up with light blue robes</a> and eager friends and family for the <a href="http://columbiaspectator.com/2014/05/19/commencement-2014">University Commencement</a> ceremony.',
 	'videoCheck':false,
@@ -584,6 +651,7 @@ var tradition116 = {
 	'link':'http://columbiaspectator.com/2014/05/19/commencement-2014'
 };
 
+// FeaturedTraditionMap['no-3'] = new FeaturedTraditionMap.FeaturedTradition(tradition3);
 FeaturedTraditionMap['no-7'] = new FeaturedTraditionMap.FeaturedTradition(tradition7);
 FeaturedTraditionMap['no-15'] = new FeaturedTraditionMap.FeaturedTradition(tradition15);
 FeaturedTraditionMap['no-20'] = new FeaturedTraditionMap.FeaturedTradition(tradition20);
@@ -591,11 +659,16 @@ FeaturedTraditionMap['no-26'] = new FeaturedTraditionMap.FeaturedTradition(tradi
 FeaturedTraditionMap['no-27'] = new FeaturedTraditionMap.FeaturedTradition(tradition27);
 FeaturedTraditionMap['no-37'] = new FeaturedTraditionMap.FeaturedTradition(tradition37);
 FeaturedTraditionMap['no-44'] = new FeaturedTraditionMap.FeaturedTradition(tradition44);
+FeaturedTraditionMap['no-45'] = new FeaturedTraditionMap.FeaturedTradition(tradition45);
 FeaturedTraditionMap['no-47'] = new FeaturedTraditionMap.FeaturedTradition(tradition47);
 FeaturedTraditionMap['no-56'] = new FeaturedTraditionMap.FeaturedTradition(tradition56);
 FeaturedTraditionMap['no-57'] = new FeaturedTraditionMap.FeaturedTradition(tradition57);
+FeaturedTraditionMap['no-61'] = new FeaturedTraditionMap.FeaturedTradition(tradition61);
 FeaturedTraditionMap['no-62'] = new FeaturedTraditionMap.FeaturedTradition(tradition62);
+FeaturedTraditionMap['no-67'] = new FeaturedTraditionMap.FeaturedTradition(tradition67);
+FeaturedTraditionMap['no-71'] = new FeaturedTraditionMap.FeaturedTradition(tradition71);
 FeaturedTraditionMap['no-77'] = new FeaturedTraditionMap.FeaturedTradition(tradition77);
+FeaturedTraditionMap['no-88'] = new FeaturedTraditionMap.FeaturedTradition(tradition88);
 FeaturedTraditionMap['no-93'] = new FeaturedTraditionMap.FeaturedTradition(tradition93);
 FeaturedTraditionMap['no-100'] = new FeaturedTraditionMap.FeaturedTradition(tradition100);
 FeaturedTraditionMap['no-116'] = new FeaturedTraditionMap.FeaturedTradition(tradition116);
@@ -605,8 +678,8 @@ FeaturedTraditionMap['no-116'] = new FeaturedTraditionMap.FeaturedTradition(trad
 /****************************************************
  * Set the initial featured tradition 
  ****************************************************/
-var currentIndex = Math.floor(Math.random() * 15);
-var indexArray = [7, 15, 20, 26, 27, 37, 44, 47, 56, 57, 62, 77, 93, 100, 116];
+var currentIndex = Math.floor(Math.random() * 20);
+var indexArray = [7, 15, 20, 26, 27, 37, 44, 45, 47, 56, 57, 61, 62, 67, 71, 77, 88, 93, 100, 116];
 setFeature(currentIndex,indexArray);
 
 
