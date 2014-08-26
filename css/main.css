@@ -173,6 +173,19 @@ body {
 	margin-right: 7%;
 }
 
+.addthis_sharing_toolbox {
+	float:center;
+	margin-top:0.5rem;
+	height:1rem;
+	display:block;
+}
+
+@media only screen and (max-width: 979px) {
+	.addthis_sharing_toolbox {
+		display:none;
+	}
+}
+
 
 /* ==========================================================================
    3.2 Left Column
