@@ -148,14 +148,17 @@ $(document).ready(function() {
   			if(countComplete==0) {
   				customMessage = 'You don\'t even go here.';
   			}
-  			else if(countComplete<=10) {
+  			else if(countComplete<=5) {
   				customMessage = '"Firs\'-years over here!" — Rubeus Hagrid';
   			}
+  			else if(countComplete<=10) {
+  				customMessage = '1020 is your bar of choice and you think Tom\'s has THE best brunch.';
+  			}
   			else if(countComplete<=20) {
-  				customMessage = 'You\'re a Lion cub. You\'re learning, you\'re growing, you\'re seeing the world.';
+  				customMessage = 'You\'re the kid inside studying during Bacchanal.';
   			}
   			else if(countComplete<=30) {
-  				customMessage = '';
+  				customMessage = 'You\'re on your way to being the overachiever your mom always knew you were. Meow, Baby Lion, Meow.';
   			}
   			else if(countComplete<=40) {
   				customMessage = 'You\'re PrezBo or DSpar (take your pick). You make appearances at a few big events each year, but are mostly absent from student life.';
@@ -164,19 +167,19 @@ $(document).ready(function() {
   				customMessage = 'You\'re Columbia football head coach Pete Mangurian. You’re trying, but you just haven’t gotten to .500.';
   			}
   			else if(countComplete==58) {
-  				customMessage = 'You\'re at exactly 50 percent, the mean score on the orgo final.';
+  				customMessage = 'You\'re at exactly 50 percent—just like the mean score on the orgo final.';
   			}
   			else if(countComplete<=71) {
-  				customMessage = 'You\'re Roar-ee. You’re very involved in campus life.';
+  				customMessage = 'You haven\'t left the confines of 110th and 120th streets since NSOP and Roar-ee is your spirit animal.';
   			}
   			else if(countComplete<=89) {
-  				customMessage = 'You\'re an overachiever. You’re that kid who reads all the books and does all the work, even though the lower grade the professor will give is a B+ anyway. Serious props for getting this far.';
+  				customMessage = 'You\'re a tour guide, a TA, and an RA. When you have time to breathe, you spend it playing “disc” on the lawn and and writing the drafts of the keynote commencement speech you\'re bound to give in 15 years.';
   			}
   			else if(countComplete<=105) {
-  				customMessage = 'You\'re either Jerry Sherwin or Wm. Theodore de Bary. You’ve been here forever and you\'ve done basically everything.';
+  				customMessage = 'Your life goals include becoming a Columbia admissions officer and visiting all of the University\'s global centers. At least 75% of your Instagram posts are of campus, Columbia acronyms are your second language, and your friends know you as "The Walking WikiCU."';
   			}
   			else if(countComplete<=116) {
-  				customMessage = 'Congratulations! You\'re the second coming of Alma Mater. You bleed Light Blue and can\'t help but break out into the Columbia fight song several times a day.';
+  				customMessage = 'Congratulations! You\'re the second coming of Alma Mater. You bleed Light Blue, all of your pants are pastel colored, and you jog Riverside Park while humming Columbia\'s fight song.';
   			}
   			
   			
@@ -334,7 +337,8 @@ function switchDescription(container,TraditionObj) {
   // Use .animate to fade out from the old image, then change the background-image and fade it in
   $(container).animate({opacity: 0}, 'slow', function() {
         $(container).empty();
-  		$(container).text(TraditionObj.description);
+  		// $(container).text(TraditionObj.description);
+  		$(container).append('<div>'+TraditionObj.description+'</div>');
         $(container).animate({opacity: 1}, 'slow');
   });
 
@@ -421,13 +425,13 @@ var tradition7 = {
 	'photoURL':'http://columbiaspectator.com/sites/default/files/Tom%27s%20Colour%20Horizontal.jpg',
 	'photoCredit': 'File Photo',
 	'videoURL':'',
-	'link':'',
+	'link':'http://columbiaspectator.com/tags/toms-restaurant',
 };
 
 var tradition15 = {
 	'index':1,
 	'number':15,
-	'description':'Vampire Weekend consists of four Columbia graduates, including lead singer and guitarist Ezra Koenig, CC \'06, pictured here at the 2014 Governor\'s Ball Music Festival. Vampire Weekend also performed at Columbia\'s 2009 Bacchanal.',
+	'description':'Vampire Weekend consists of four Columbia graduates, including lead singer and guitarist Ezra Koenig, CC \'06, <a href="http://columbiaspectator.com/2014/06/07/photos-governors-ball-2014-jack-white-outkast-strokes-wow-crowds">pictured here at the 2014 Governor\'s Ball Music Festival</a>. Vampire Weekend also performed at <a href="https://www.flickr.com/photos/thatgreenplant/sets/72157617007861726/detail/">Columbia\'s 2009 Bacchanal</a>.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/DSC_0361.jpg',
 	'photoCredit': 'Natalie Moore / Staff Photographer',
@@ -438,7 +442,7 @@ var tradition15 = {
 var tradition20 = {
 	'index':2,
 	'number':20,
-	'description':'The Varsity Show, a full-length musical put on by students at the end of every spring semester since 1984, is one of Columbia\'s longest ongoing traditions.',
+	'description':'The Varsity Show, a full-length musical put on by students at the end of every spring semester since 1894, is <a href="http://www.thevarsityshow.com/">one of Columbia\'s longest ongoing traditions</a>.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
@@ -449,18 +453,18 @@ var tradition20 = {
 var tradition26 = {
 	'index':3,
 	'number':26,
-	'description':'During the 2013-14 school year, student activism centered around Columbia\'s sexual assault policy. One of the most visible events was a freeze mob on College walk in November 2013 during which students held signs like the one pictured here.',
+	'description':'During the 2013-14 school year, student activism centered around <a href="http://columbiaspectator.com/tags/sexual-assault">Columbia\'s sexual assault policy</a>. One of the most visible events was <a href="http://columbiaspectator.com/multimedia/2013/11/20/title-ix-team-organizes-anti-sexual-violence-freeze-mob">a freeze mob on College walk</a> in November 2013, during which students held signs like the one pictured here.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/title9_file.jpg',
 	'photoCredit': 'Kiera Wood / Senior Staff Photographer',
 	'videoURL':'',
-	'link':'http://columbiaspectator.com/tags/sexual-assault'
+	'link':''
 };
 
 var tradition27 = {
 	'index':4,
 	'number':27,
-	'description':'In Spring 2014, the controversial decision by the Barnard administration to remove a Students for Justice in Palestine banner led to a series of protests and counterprotests by pro-Israeli and pro-Palestinian student groups on College Walk.',
+	'description':'In Spring 2014, <a href="http://columbiaspectator.com/news/2014/03/11/students-justice-palestine-banner-removal-sparks-debate-free-speech-display-policy">the controversial decision by the Barnard administration to remove a Students for Justice in Palestine banner</a> led to a series of protests and counterprotests by pro-Israeli and pro-Palestinian student groups on College Walk.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/SJPbanner_chan_1.jpg',
 	'photoCredit': 'Justin Chan / Senior Staff Photographer',
@@ -471,7 +475,7 @@ var tradition27 = {
 var tradition37 = {
 	'index':5,
 	'number':37,
-	'description':'In the 2013-14 school year, Columbia sports teams took home five Ivy League championships. If Baker Athletics Complex is too far, check out the sports like basketball and volleyball that play on campus.',
+	'description':'In the 2013-14 school year, Columbia sports teams took home five Ivy League championships. If Baker Athletics Complex is too far, check out the sports like <a href="http://columbiaspectator.com/sports/2014/05/11/yir-2013-14-mens-basketball-capped-historic-season-postseason-run">basketball</a> and <a href="http://columbiaspectator.com/sports/volleyball">volleyball</a> that play on campus.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/roaree%20high%20five.png',
 	'photoCredit': 'Illustration by Christina Tang',
@@ -483,7 +487,7 @@ var tradition37 = {
 var tradition44 = {
 	'index':6,
 	'number':44,
-	'description':'The stained glass windows, the flying buttresses, the beauitful view from the roof ... ther vertical tour of St. John the Divine will be the best part of Art Hum, as long as you\'re not afraid of the heights.',
+	'description':'The stained glass windows, the flying buttresses, and the beauitful view from the roof will make <a href="http://columbiaspectator.com/tags/saint-john-divine">the vertical tour of St. John the Divine</a> the best part of Art Hum, as long as you\'re not afraid of heights.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/StJohns.jpg',
 	'photoCredit': 'Justin Chan / Senior Staff Photographer',
@@ -494,7 +498,7 @@ var tradition44 = {
 var tradition47 = {
 	'index':7,
 	'number':47,
-	'description':'In April 2012, Daniel Radcliffe came to campus to film scenes of "Kill Your Darlings," a Sony Pictures Classics movie about Columbia\'s famed Beat writers. Radcliffe, pictured here on Low Plaza in costume, portrayed Allen Ginsberg in the film.',
+	'description':'In April 2012, <a href="http://columbiaspectator.com/2013/10/18/kill-your-darlings-rediscovering-columbias-bohemians">Daniel Radcliffe came to campus to film scenes of "Kill Your Darlings,"</a> a Sony Pictures Classics movie about Columbia\'s famed <a href="http://www.wikicu.com/Beat_Generation">Beat writers</a>. Radcliffe, pictured here on Low Plaza in costume, portrayed Allen Ginsberg in the film.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/Brann_Radcliffe-20120405.jpg',
 	'photoCredit': 'David Brann / Senior Staff Photographer',
@@ -505,18 +509,18 @@ var tradition47 = {
 var tradition56 = {
 	'index':8,
 	'number':56,
-	'description':'Orgo Night is a semesterly event held by the Columbia University Marching Band that happens in Butler 209 at midnight on the first Friday of finals.',
+	'description':'<a href="http://columbiaspectator.com/2014/05/08/orgo-night-live-blog">Orgo Night</a> is a semesterly event held by the <a href="http://www.wikicu.com/Columbia_University_Marching_Band">Columbia University Marching Band</a> in <a href="http://www.wikicu.com/Butler_209">Butler 209</a> at midnight on the first Friday of finals. The band tells jokes about campus happenings and plays songs to along with its performance.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
 	'videoURL':'//www.youtube.com/embed/5lRAk9no4_0',
-	'link':'http://columbiaspectator.com/2014/05/08/orgo-night-live-blog'
+	'link':''
 };
 
 var tradition57 = {
 	'index':9,
 	'number':57,
-	'description':'Started at Barnard in 1978, Take Back the Night aims to create a safe space for sexual assault survivors and to promote discussion about sexual violence on college campuses.',
+	'description':'Started at Barnard in 1978, <a href="http://columbiaspectator.com/tags/take-back-night">Take Back the Night</a> aims to create a safe space for sexual assault survivors and to promote discussion about sexual violence on college campuses.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/TBTNFromAbove_Kessel-lessYellow-WEB.jpg',
 	'photoCredit': 'File Photo',
@@ -527,52 +531,52 @@ var tradition57 = {
 var tradition62 = {
 	'index':10,
 	'number':62,
-	'description':'Whenever a big snowstorm hits, Facebook events for snowball fights on South Lawn are bound to appear. During one such snowball fight in January 2014, a CNN reporter was caught in the crossfire on live television.',
+	'description':'Whenever a big snowstorm hits, Facebook events for snowball fights on South Lawn are bound to appear. During one such snowball fight in January 2014, <a href="http://www.huffingtonpost.com/2014/01/22/reporter-snowballs-cnn-cold-weather_n_4644719.html">a CNN reporter was caught in the crossfire on live television</a>.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
 	'videoURL':'http://www.cnn.com/video/api/embed.html#/video/bestoftv/2014/01/22/ac-carroll-snowball-fight.cnn',
-	'link':'http://spectrum.columbiaspectator.com/spectrum/on-the-art-of-reporting-amidst-a-snowball-fight-and-other-news'
+	'link':''
 };
 
 var tradition77 = {
 	'index':11,
 	'number':77,
-	'description':'Bacchanal is a free spring concert that takes place on Low Plaza. Some of the more popular headliners in recent years include Snoop Dogg, Macklemore, and Wiz Khalifa.',
+	'description':'<a href="http://columbiaspectator.com/tags/bacchanal">Bacchanal</a> is a free spring concert that takes place on Low Plaza. Some of the more popular headliners in recent years include Snoop Dogg, Macklemore, Wiz Khalifa, and Lupe Fiasco.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
 	'videoURL':'//www.youtube.com/embed/WeQujjh4B_o?rel=0',
-	'link':'http://columbiaspectator.com/tags/bacchanal'
+	'link':''
 };
 
 var tradition93 = {
 	'index':12,
 	'number':93,
-	'description':'When Homecoming rolls around in October, show some school spirit and take the free shuttle or the 1 Train up to Baker Athletics Complex, at Broadway and 218th Street. Don\'t know much about sports? That\'s OK. Neither do the people in this video.',
+	'description':'When <a href="http://columbiaspectator.com/orientation-2014-fall-sports-calendar">Homecoming rolls around in October</a>, show some school spirit and take the free shuttle or the 1 Train up to Baker Athletics Complex, at Broadway and 218th Street. Don\'t know much about sports? That\'s OK. <a href="http://columbiaspectator.com/2012/10/21/what-do-columbia-students-know-about-our-football-team">Neither do the people in this video</a>.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
 	'videoURL':'//www.youtube.com/embed/3g5L-gVjPP4',
-	'link':'http://spectrum.columbiaspectator.com/sports/what-do-columbia-students-know-about-our-football-team-not-much'
+	'link':''
 };
 
 
 var tradition100 = {
 	'index':13,
 	'number':100,
-	'description':'Every winter, College Walk is illuminated by the glow of lights hung on the campus\'s trees. At the end of November or the beginning of December, students come together for the festive Tree Lighting and Yule Log ceremonies.',
+	'description':'Every winter, College Walk is illuminated by the glow of lights hung on the campus\'s trees. At the end of November or the beginning of December, students come together for the festive <a href="http://columbiaspectator.com/tags/tree-lighting-ceremony">Tree Lighting and Yule Log ceremonies</a>.',
 	'videoCheck':true,
 	'photoURL':'',
 	'photoCredit': '',
 	'videoURL':'//www.youtube.com/embed/I_UB4ETgSM8',
-	'link':'http://columbiaspectator.com/tags/tree-lighting-ceremony'
+	'link':''
 };
 
 var tradition116 = {
 	'index':14,
 	'number':116,
-	'description':'Every May, Low Plaza and South Lawn fill up with light blue robes and eager friends and family for the University Commencement ceremony.',
+	'description':'Every May, <a href="http://columbiaspectator.com/2014/05/21/slideshow-columbia-university-commencement-2014">Low Plaza and South Lawn fill up with light blue robes</a> and eager friends and family for the <a href="http://columbiaspectator.com/2014/05/19/commencement-2014">University Commencement</a> ceremony.',
 	'videoCheck':false,
 	'photoURL':'http://columbiaspectator.com/sites/default/files/IMG_0711.jpg',
 	'photoCredit': 'Steven Lau / Senior Staff Photographer',
