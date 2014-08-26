@@ -36,6 +36,8 @@ $(document).ready(function() {
 	$('.trad-number').on('click', function() {
 		$(this).toggleClass('checkmark');
 		$(this).parent().toggleClass('completed');
+		countComplete = $('.completed').length;
+		$('#mobile-counter > #counter').text(countComplete);
 	});
 	
 	
@@ -354,7 +356,8 @@ function switchVideo(container,TraditionObj) {
   
   var videoURL = TraditionObj.videoURL;
   var width = $(container).width();
-  var height = width/16*9;
+  // var height = width/16*9; DON'T NEED TO DO THIS
+  var height = $(container).height();
   
   // Use .animate to fade out from the old image/video, then change the background-image, add video, and fade in
   $(container).animate({opacity: 0}, 'slow', function() {
