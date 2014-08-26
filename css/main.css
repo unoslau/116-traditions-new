@@ -660,6 +660,12 @@ a.featured-link:hover {
 	border-left: 0.3rem solid #6699CC;
 }
 
+#byline {
+	font-size:0.8rem;
+	float:right;
+	margin-top:1.5rem;
+	margin-bottom:1rem;
+}
 
 
 /* ==========================================================================
@@ -906,6 +912,11 @@ a.featured-link:hover {
 
     .left-container {
     	padding-top:6.5rem;
+    }
+    
+    
+    #byline {
+    	display:none;
     }
     
 }
