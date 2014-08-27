@@ -721,8 +721,8 @@ $('#next').click(function() {
 document.getElementById('facebookButton').onclick = function() {
 	var name;
 	var description = Traditions.message;
-	var picture = "http://sandbox.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/img/116_trad_graphic.jpg";
-	var link = 'http://sandbox.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/';
+	var picture = "http://columbiaspectator.com/sites/default/files/116_trad_graphic.jpg";
+	var link = 'http://columbiaspectator.com/features/orientation-2014-interactive-116-traditions/';
 	if (Traditions.count == null){
 		name= "116 Traditions";
 	}
