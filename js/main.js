@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	
+	Traditions= {};
+	Traditions.message= "How many of Columbia's 116 traditions have you completed? What's left to check off your list? Use the Columbia Daily Spectator's interactive 116 traditions feature to find out.";
+	Traditions.count=null;
 	/****************************************************
 	 Code snippets for drop-down selector
 	 ****************************************************/
@@ -127,6 +129,11 @@ $(document).ready(function() {
     	// If the all button is already selected, nothing happens
 	});
 	
+
+	/****************************************************
+      Calculate message function
+	 ****************************************************/
+
 	
 	/****************************************************
 	 Event handler for calculate button
@@ -134,6 +141,8 @@ $(document).ready(function() {
 	var countComplete = 0;
 	var resultsArray = [];
 	resultsArray[0] = "";
+
+
 	
 	$('#calculate-button').click(function() {
 		
@@ -181,7 +190,8 @@ $(document).ready(function() {
   			else if(countComplete<=116) {
   				customMessage = 'Congratulations! You\'re the second coming of Alma Mater. You bleed Light Blue, all of your pants are pastel colored, and you jog Riverside Park while humming Columbia\'s fight song.';
   			}
-  			
+  			Traditions.message=customMessage;
+  			Traditions.count=countComplete;
   			
   			$('#custom-message-text').text(customMessage);
   			
@@ -704,4 +714,28 @@ $('#next').click(function() {
 	// if the currentIndex is the last element in the array, nothing happens  
 });
 
+/****************************************************
+ * Code for Facebook sharing
+ ****************************************************/
 
+document.getElementById('facebookButton').onclick = function() {
+	var name;
+	var description = Traditions.message;
+	var picture = "http://columbiaspectator.com/sites/default/files/116_trad_graphic.jpg";
+	var link = 'http://sandbox.columbiaspectator.com/features/orientation-2014-interactive-116-traditions/';
+	if (Traditions.count == null){
+		name= "116 Traditions";
+	}
+	else {
+		name= "You've completed "+ Traditions.count+ " traditions! | 116 Traditions";
+	}
+
+	FB.ui(
+	 {
+	  method: 'feed',
+	  link: link,
+	  name: name,
+	  description: description,
+	  picture: picture
+	}, function(response){});
+}
