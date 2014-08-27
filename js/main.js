@@ -161,7 +161,7 @@ $(document).ready(function() {
   				customMessage = '"Firs\'-years over here!" — Rubeus Hagrid';
   			}
   			else if(countComplete<=10) {
-  				customMessage = '1020 is your bar of choice and you think Tom\'s has THE best brunch.';
+  				customMessage = 'You\'re basic. 1020 is your bar of choice and you think Tom\'s has THE best brunch.';
   			}
   			else if(countComplete<=20) {
   				customMessage = 'You\'re the kid inside studying during Bacchanal.';
@@ -714,10 +714,10 @@ $('#next').click(function() {
 	// if the currentIndex is the last element in the array, nothing happens  
 });
 
+
 /****************************************************
  * Code for Facebook sharing
  ****************************************************/
-
 document.getElementById('facebookButton').onclick = function() {
 	var name;
 	var description = Traditions.message;
@@ -727,7 +727,7 @@ document.getElementById('facebookButton').onclick = function() {
 		name= "116 Traditions";
 	}
 	else {
-		name= "You've completed "+ Traditions.count+ " traditions! | 116 Traditions";
+		name= "I've completed "+ Traditions.count+ " of 116 Columbia traditions! How many have you completed?";
 	}
 
 	FB.ui(
@@ -738,4 +738,5 @@ document.getElementById('facebookButton').onclick = function() {
 	  description: description,
 	  picture: picture
 	}, function(response){});
-}
+};
+
