@@ -715,7 +715,7 @@ $('#next').click(function() {
 });
 
 
-/****************************************************
+/***************************************************
  * Code for Facebook sharing
  ****************************************************/
 document.getElementById('facebookButton').onclick = function() {
