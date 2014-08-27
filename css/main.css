@@ -737,10 +737,11 @@ a.featured-link:hover {
 }
 
 #facebookButton {
-	display:inline-block;
-	height: 1.5rem;
-	width: auto;
-}
+	display: block;
+	height: auto;
+	width: 10rem;
+	margin: 0.3rem auto;
+	cursor: pointer;
 
 /* ==========================================================================
    4.0 Media Queries
